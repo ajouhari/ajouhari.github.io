@@ -104,16 +104,6 @@ body header #banner {
     position: relative;
 }
 
-body header #banner-main {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Resources/Icons/wallpaper.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;   
-    width: 100vw;
-    height: 60vh;
-    position: relative;
-}
-
 body header #banner .banner-text h1 {
     font-size: 70px;
     font-weight: bold;

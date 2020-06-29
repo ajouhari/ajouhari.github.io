@@ -25,14 +25,14 @@
                 </nav>
             </div>
         </div>
-        <div id="banner-main">
+        <div id="banner">
             <div class="banner-text">
                 <h1>Faster, Better Code</h1>
             </div>
         </div>
         <script>
             window.onscroll = function() {
-                let element = document.getElementById("banner-main");
+                let element = document.getElementById("banner");
                 let banner = element.getBoundingClientRect();
                 var currentScrollPos = window.pageYOffset;
                 if (banner.height > currentScrollPos) {
