@@ -103,6 +103,10 @@ body header #banner {
     position: relative;
 }
 
+body header .error {
+    height: 100vh;
+}
+
 body header .main {
     height: 60vh;
 }
