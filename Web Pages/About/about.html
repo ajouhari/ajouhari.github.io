@@ -1,0 +1,101 @@
+<!-- Author: Abdulrahman Jouhari -->
+<!-- Project: AJouhari Personal Website -->
+<!-- Date: June 26th, 2020 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../../Stylesheet/general.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- Navigation Bar -->
+        <div id="navigation">
+            <div class="info">
+                <img class="logo" src="../Resources/Logo/logo-letters.png">
+                <nav>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="../Algorithms/algorithms.html">Algorithms</a></li>
+                    <li><a href="../Web Design/web-design.html">Web Design</a></li>
+                    <li><a href="../Games/games.html">Games</a></li>
+                </nav>
+            </div>
+        </div>
+        <div id="banner">
+            <div class="banner-text">
+                <h1>Faster, Better Code</h1>
+            </div>
+        </div>
+        <script>
+            window.onscroll = function() {
+                let element = document.getElementById("banner");
+                let banner = element.getBoundingClientRect();
+                var currentScrollPos = window.pageYOffset;
+                if (banner.height > currentScrollPos) {
+                    document.getElementById("navigation").style.backgroundColor = "None";
+                } else {
+                    document.getElementById("navigation").style.backgroundColor = "#3B5998";
+                }
+            }
+        </script>
+    </header>
+
+    <main>
+        <div class="spacer"></div>
+        <article class="flex">
+            <div class="about-image">
+                <img src="../../Resources/Personal/abdulrahman.jpg" alt="Abdulrahman Jouhari">
+            </div>
+            <div class="about-description">
+                <p>To be able to achieve momentous tasks using only a computer with an internet connection is an ability I never take for granted. 
+                    But It wouldn’t be possible without the great minds that preceded us. Those that were never satisfied with the status quo. 
+                    Those that kept pushing for greater things. Those that invent, then reinvent themselves. Those that made the world a better 
+                    place. To them, I am thankful, and I hope to give back to mankind as they have done. <br><br>
+                    But how does one even go about making the world a better place? Well, think about all the times you were navigating the web 
+                    or using an application, and it took a long time to load, or even worse, it suddenly crashed. The world would be a better 
+                    place if we didn’t have to deal with that. <br><br>
+                    Nobody likes code that breaks or has an extremely long runtime. But that’s the harsh reality we have to face. There’s tons of 
+                    bad code all over the internet. That’s where I come in to fix it. I write my code to perfection, producing programs that won’t 
+                    break and with a runtime that is efficient as possible. <br><br>
+                    Although I prefer the <strong>Python</strong> programming language, I also have experience with the following: <strong>JavaScript, Java, HTML5, CSS.</strong> 
+                    As well as experience with the following frameworks: <strong>GitHub, Unity.</strong>
+                
+                </p>
+            </div>
+        </article>
+        <hr>
+    </main>
+
+    <footer>
+        <!-- Contact Information -->
+        <article class="flex">
+            <div class="icons">
+                <img src="../../Resources/Logo/logo.png" alt="logo">
+                <icons class="flex">
+                    <a href="https://www.linkedin.com/in/abdulrahman-jouhari/"><img src="../../Resources/Icons/linkedin-icon.png"></a>
+                    <a href="https://github.com/ajouhari"><img src="../Resources/Icons/github-icon.png"></a>
+                    <a href="https://stackoverflow.com/users/13521143/abdulrahman-jouhari?tab=profile"><img src="../../Resources/Icons/stack-overflow-icon.png"></a>
+                </icons>
+            </div>
+            <div class="info">
+                <p>For any inquires, recommendations, or bug reports, please contact the email listed 
+                    below. I will try to reply within a reasonable amount of time. The site is under 
+                    construction and more projects are being worked on. Happy Coding :) <br> <br>
+                    For inquires: <br>
+                    official@ajouhari.com <br> <br>
+                    For reccomendations:<br>
+                    support@ajouhari.com</p>
+            </div>
+        </article>
+        <!-- Copyright Notice -->
+        <hr>
+        <div class="copyright">
+            <p>Copyright © 2020 AJouhari</p>
+        </div>
+    </footer>
+</body>
+</html>

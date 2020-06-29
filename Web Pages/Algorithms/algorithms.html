@@ -1,0 +1,120 @@
+<!-- Author: Abdulrahman Jouhari -->
+<!-- Project: AJouhari Personal Website -->
+<!-- Date: June 26th, 2020 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../../Stylesheet/general.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- Navigation Bar -->
+        <div id="navigation">
+            <div class="info">
+                <img class="logo" src="../../Resources/Logo/logo-letters.png">
+                <nav>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../About/about.html">About</a></li>
+                    <li><a href="./algorithms.html">Algorithms</a></li>
+                    <li><a href="../Web Design/web-design.html">Web Design</a></li>
+                    <li><a href="../Games/games.html">Games</a></li>
+                </nav>
+            </div>
+        </div>
+        <div id="banner">
+            <div class="banner-text">
+                <h1>Faster, Better Code</h1>
+            </div>
+        </div>
+        <script>
+            window.onscroll = function() {
+                let element = document.getElementById("banner");
+                let banner = element.getBoundingClientRect();
+                var currentScrollPos = window.pageYOffset;
+                if (banner.height > currentScrollPos) {
+                    document.getElementById("navigation").style.backgroundColor = "None";
+                } else {
+                    document.getElementById("navigation").style.backgroundColor = "#3B5998";
+                }
+            }
+        </script>
+    </header>
+
+    <main>
+        <div class="spacer"></div>
+        <article class="flex">
+            <div class="info">
+                <h1>General Algorithms</h1>
+                <p>Many of our everyday tasks are rather menial, and can easily be automated or assisted by computer 
+                    algorithms. Available is a list of algorithms that serve many different purposes. Each are 
+                    labelled by their complexity, instructions, and the date at which they were created.</p>
+                    <button onclick="location.href='https://github.com/ajouhari/algorithms/tree/master/Easy'" type="button"><span>View Code In Github</span></button>
+            </div>
+            <div class="icon">
+                <img src="../../Resources/Icons/gears-icon.png" alt="General Algorithms">
+            </div>
+        </article>
+        <hr>
+
+        <article class="flex">
+            <div class="info">
+                <h1>Search Algorithms</h1>
+                <p>Search algorithms have two primary function: to find if a path exists between two locations, and if so, to find the 
+                    shortest path between them. Here I will code and review multiple search algorithms, from a brute-force method, to 
+                    a well-designed a-star search algorithm.</p>
+                    <button onclick="location.href='https://github.com/ajouhari/algorithms/tree/master/Search'" type="button"><span>View Code In Github</span></button>
+            </div>
+            <div class="icon">
+                <img src="../../Resources/Icons/nodes-icon.png" alt="Search Algorithms">
+            </div>
+        </article>
+        <hr>
+
+        <article class="flex">
+            <div class="info">
+                <h1>Sort Algorithms</h1>
+                <p>With today’s big data, with their lists large enough to compose a book, it becomes increasingly important 
+                    to use more and more efficient sorting algorithms to sift through the data. Here I will code and review 
+                    some of the best known sorting algorithms.</p>
+                    <button onclick="location.href='https://github.com/ajouhari/algorithms'" type="button"><span>View Code In Github</span></button>
+            </div>
+            <div class="icon">
+                <img src="../../Resources/Icons/sorted-bars-icon.png" alt="Sort Algorithms">
+            </div>
+        </article>
+        <hr>
+    </main>
+
+    <footer>
+        <!-- Contact Information -->
+        <article class="flex">
+            <div class="icons">
+                <img src="../../Resources/Logo/logo.png" alt="logo">
+                <icons class="flex">
+                    <a href="https://www.linkedin.com/in/abdulrahman-jouhari/"><img src="../../Resources/Icons/linkedin-icon.png"></a>
+                    <a href="https://github.com/ajouhari"><img src="../../Resources/Icons/github-icon.png"></a>
+                    <a href="https://stackoverflow.com/users/13521143/abdulrahman-jouhari?tab=profile"><img src="../../Resources/Icons/stack-overflow-icon.png"></a>
+                </icons>
+            </div>
+            <div class="info">
+                <p>For any inquires, recommendations, or bug reports, please contact the email listed 
+                    below. I will try to reply within a reasonable amount of time. The site is under 
+                    construction and more projects are being worked on. Happy Coding :) <br> <br>
+                    For inquires: <br>
+                    official@ajouhari.com <br> <br>
+                    For reccomendations:<br>
+                    support@ajouhari.com</p>
+            </div>
+        </article>
+        <!-- Copyright Notice -->
+        <hr>
+        <div class="copyright">
+            <p>Copyright © 2020 AJouhari</p>
+        </div>
+    </footer>
+</body>
+</html>

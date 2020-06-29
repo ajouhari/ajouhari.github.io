@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="./style.css" type="text/css" rel="stylesheet">
+    <link href="./Stylesheet/style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -17,22 +17,22 @@
             <div class="info">
                 <img class="logo" src="./Resources/Logo/logo-letters.png">
                 <nav>
-                    <li><a href="https://ajouhari.com/">Home</a></li>
-                    <li><a href="https://ajouhari.com/about/">About</a></li>
-                    <li><a href="https://ajouhari.com/algorithms/">Algorithms</a></li>
-                    <li><a href="https://ajouhari.com/web-design/">Web Design</a></li>
-                    <li><a href="https://ajouhari.com/games/">Games</a></li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./Web Pages/">About</a></li>
+                    <li><a href="./Web Pages/">Algorithms</a></li>
+                    <li><a href="./Web Pages/">Web Design</a></li>
+                    <li><a href="./Web Pages/">Games</a></li>
                 </nav>
             </div>
         </div>
-        <div id="banner">
+        <div id="banner-main">
             <div class="banner-text">
                 <h1>Faster, Better Code</h1>
             </div>
         </div>
         <script>
             window.onscroll = function() {
-                let element = document.getElementById("banner");
+                let element = document.getElementById("banner-main");
                 let banner = element.getBoundingClientRect();
                 var currentScrollPos = window.pageYOffset;
                 if (banner.height > currentScrollPos) {
