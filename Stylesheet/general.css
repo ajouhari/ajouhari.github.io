@@ -9,6 +9,7 @@ html {
     color: #fbfbfb;
     background-color: #1f1f1f;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 body {
@@ -53,7 +54,7 @@ header #navigation {
     position: fixed;
     background-color: None;
     background-size: cover;
-    width: 100%;
+    width: 100vw;
     height: 80px;
     top: 0;
     left: 50%;
@@ -99,7 +100,7 @@ body header #banner {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;   
-    width: 100vw;
+    width: 100%;
     position: relative;
 }
 
