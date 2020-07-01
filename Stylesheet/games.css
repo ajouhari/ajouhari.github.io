@@ -249,15 +249,15 @@ footer hr {
 }
 
 /* Adjusting For Screen Size */
+@media only screen and (max-width: 479px) {
 
-@media only screen and (max-width: 480px) {
-    main article {
-        display: none;
-    }
-} 
+}
+@media only screen and (min-width: 479px) and (max-width: 767px) {
 
-@media only screen and (min-width: 480px) and (max-width: 1024px){
-    main article {
-        display: none;
-    }
+}
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+
+}
+@media only screen and (min-width: 991px) and (max-width: 1600px) {
+    
 }
