@@ -141,6 +141,10 @@ main article {
     margin: auto auto;
 }
 
+main article .mobile {
+    display: none;
+}
+
 main article .info,
 main article .icon {
     height: auto;
@@ -172,6 +176,10 @@ main article .about-image img {
     width: auto;
     display: block;
     margin: auto auto;
+}
+
+main article .about-image-cropped {
+    display: none;
 }
 
 main article .info button {
@@ -268,7 +276,7 @@ footer hr {
 
 /* Adjusting For Screen Size */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 700px) {
     
     /* General */
 
@@ -303,7 +311,7 @@ footer hr {
     /* Main */
 
     main .spacer {
-        display: none;
+        padding-top: 10px;
     }
 
     main article {
@@ -316,12 +324,19 @@ footer hr {
         margin-top: 10px;
     }
 
+    main article .mobile {
+        height: auto;
+        width: 100%;
+        display: initial;
+    }
+
     main article .icon {
         display: none;
     }
 
     main article .info {
         width: 100%;
+        margin-top: 20px;
     }
 
     main article .about-image {
@@ -334,9 +349,11 @@ footer hr {
         padding-right: 0;
     }
 
-    main article .icon img {
-        height: 200px;
-        width: auto;
+    main article .mobile img {
+        height: auto;
+        width: 70%;
+        display: block;
+        margin: auto auto;
     }
     
     main article .about-image img {
@@ -379,13 +396,13 @@ footer hr {
     
 } 
 
-@media only screen and (min-width: 768px) and (max-width: 1024px){
+@media only screen and (min-width: 700px) and (max-width: 1024px){
 
 
     /* General */
 
     hr {
-        width: 750px;
+        width: 650px;
     }
 
     .flex {
@@ -396,7 +413,7 @@ footer hr {
     /* Header */
 
     header #navigation .info {
-        width: 700px;
+        width: 600px;
     }
 
     header #navigation .info nav {
@@ -418,7 +435,7 @@ footer hr {
     }
 
     main article {
-        width: 700px;
+        width: 600px;
         padding: 50px 0;
     }
     
@@ -429,15 +446,11 @@ footer hr {
     }
 
     main article .about-image {
-        height: auto;
-        width: 55%;
-        padding-top: 18px;
+        display: none;
     }
     
     main article .about-description {
-        width: 45%;
-        padding-left: 10px;
-        padding-right: 40px;
+        width: 100%;
     }
     
     main article .icon img {
@@ -445,17 +458,11 @@ footer hr {
         width: 250px;
         margin: auto auto;
     }
-    
-    main article .about-image img {
-        height: auto;
-        width: 55%;
-        display: block;
-    }
 
     /* Footer */
 
     footer article {
-        width: 700px;
+        width: 600px;
         margin: 30px auto;
     }
 
@@ -465,14 +472,14 @@ footer hr {
     }
 
     footer .icons img {
-        height: 168px;
-        width: 168px;
+        height: 188px;
+        width: 188px;
         padding-top: 5px;
     }
 
     footer .icons icons img {
-        height: 28px;
-        width: 28px;
+        height: 32px;
+        width: 32px;
         padding: 4px 4px;
         border: 2px solid #8abbff;
         margin-right: 15px;
@@ -483,7 +490,7 @@ footer hr {
     }
 
     footer .copyright {
-        width: 700px;
+        width: 600px;
         margin: 20px auto;
     }
 }
@@ -493,7 +500,7 @@ footer hr {
     /* General */
 
     hr {
-        width: 900px;
+        width: 950px;
     }
 
     .flex {
@@ -504,7 +511,7 @@ footer hr {
     /* Header */
 
     header #navigation .info {
-        width: 800px;
+        width: 850px;
     }
 
     body header .general {
@@ -532,16 +539,28 @@ footer hr {
         margin: auto auto;
     }
 
+    main .about {
+        flex-wrap: nowrap;
+    }
+
     main article .about-image {
+        display: none;
+    }
+
+    main article .about-image-cropped {
+        display: initial;
+    }
+
+    main article .about-image-cropped {
         height: auto;
-        width: 55%;
+        width: 40%;
         padding-top: 18px;
     }
     
     main article .about-description {
-        width: 45%;
-        padding-left: 10px;
-        padding-right: 40px;
+        width: 60%;
+        padding-left: 20px;
+        padding-right: 0;
     }
     
     main article .icon img {
@@ -550,9 +569,9 @@ footer hr {
         margin: auto auto
     }
     
-    main article .about-image img {
+    main article .about-image-cropped img {
         height: auto;
-        width: 55%;
+        width: 100%;
         display: block;
     }
 
