@@ -117,7 +117,7 @@ body header .general {
 }
 
 body header #banner .banner-text h1 {
-    font-size: 70px;
+    font-size: 100px;
     font-weight: bold;
 }
 
@@ -161,8 +161,8 @@ main article .about-description {
 }
 
 main article .icon img {
-    height: 250px;
-    width: auto;
+    height: auto;
+    width: 300px;
     display: block;
     margin: auto auto;
 }
@@ -181,7 +181,7 @@ main article .info button {
     font-size: 1.1rem;
     opacity: 0.87;
     display: inline-block;
-    border-radius: 4px;
+    border-radius: 6px;
     background-color: #1f1f1f;
     color: #fbfbfb;
     text-align: center;
@@ -215,10 +215,6 @@ main article .info button:hover span:after {
     right: 0;
 }
 
-main hr {
-    width: 1100px;
-}
-
 /* Footer */
 footer article {
     width: 1050px;
@@ -245,7 +241,7 @@ footer .icons icons img {
     margin-right: 15px;
     margin-left: 3px;
     opacity: 0.6;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 footer .icons icons img:hover {
@@ -272,14 +268,326 @@ footer hr {
 
 /* Adjusting For Screen Size */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
+    
+    /* General */
 
+    hr {
+        width: 90vw;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+    }
+
+    /* Header */
+
+    header #navigation .info {
+        width: 80vw;
+    }
+
+    header #navigation .info nav {
+        display: none;
+    }
+
+    body header .general {
+        height: 60vh;
+    }
+
+    body header #banner .banner-text h1 {
+        font-size: 70px;
+    }
+
+    /* Main */
+
+    main .spacer {
+        display: none;
+    }
+
+    main article {
+        width: 80vw;
+        padding: 30px 0;
+        flex-wrap: wrap;
+    }
+
+    main article .info {
+        margin-top: 10px;
+    }
+
+    main article .icon {
+        display: none;
+    }
+
+    main article .info {
+        width: 100%;
+    }
+
+    main article .about-image {
+        display: none;
+    }
+    
+    main article .about-description {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    main article .icon img {
+        height: 200px;
+        width: auto;
+    }
+    
+    main article .about-image img {
+        height: auto;
+        width: 90%;
+    }
+
+    /* Footer */
+
+    footer article {
+        width: 80vw;
+        margin: 30px auto;
+    }
+
+    footer .icons {
+        height: auto;
+        width: 80%;
+    }
+
+    footer .icons img {
+        display: none;
+    }
+
+    footer .icons icons img {
+        height: 30px;
+        width: 30px;
+        padding: 4px 4px;
+        border: 2px solid #8abbff;
+        margin-right: 15px;
+    }
+
+    footer .info {
+        width: 100%;
+    }
+
+    footer .copyright {
+        width: 80vw;
+        margin: 20px auto;
+    }
+    
 } 
 
-@media only screen and (min-width: 480px) and (max-width: 1024px){
+@media only screen and (min-width: 768px) and (max-width: 1024px){
 
+
+    /* General */
+
+    hr {
+        width: 750px;
+    }
+
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* Header */
+
+    header #navigation .info {
+        width: 700px;
+    }
+
+    header #navigation .info nav {
+        display: none;
+    }
+
+    body header .general {
+        height: 60vh;
+    }
+
+    body header #banner .banner-text h1 {
+        font-size: 70px;
+    }
+
+    /* Main */
+
+    main .spacer {
+        display: none;
+    }
+
+    main article {
+        width: 700px;
+        padding: 50px 0;
+    }
+    
+    main article .info,
+    main article .icon {
+        width: 50%;
+        margin: auto auto;
+    }
+
+    main article .about-image {
+        height: auto;
+        width: 55%;
+        padding-top: 18px;
+    }
+    
+    main article .about-description {
+        width: 45%;
+        padding-left: 10px;
+        padding-right: 40px;
+    }
+    
+    main article .icon img {
+        height: auto;
+        width: 250px;
+        margin: auto auto;
+    }
+    
+    main article .about-image img {
+        height: auto;
+        width: 55%;
+        display: block;
+    }
+
+    /* Footer */
+
+    footer article {
+        width: 700px;
+        margin: 30px auto;
+    }
+
+    footer .icons {
+        height: auto;
+        width: 40%;
+    }
+
+    footer .icons img {
+        height: 168px;
+        width: 168px;
+        padding-top: 5px;
+    }
+
+    footer .icons icons img {
+        height: 28px;
+        width: 28px;
+        padding: 4px 4px;
+        border: 2px solid #8abbff;
+        margin-right: 15px;
+    }
+
+    footer .info {
+        width: 60%;
+    }
+
+    footer .copyright {
+        width: 700px;
+        margin: 20px auto;
+    }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1600px){
 
+    /* General */
+
+    hr {
+        width: 900px;
+    }
+
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* Header */
+
+    header #navigation .info {
+        width: 800px;
+    }
+
+    body header .general {
+        height: 60vh;
+    }
+
+    body header #banner .banner-text h1 {
+        font-size: 70px;
+    }
+
+    /* Main */
+
+    main .spacer {
+        padding-top: 10px;
+    }
+
+    main article {
+        width: 850px;
+        padding: 50px 0;
+    }
+    
+    main article .info,
+    main article .icon {
+        width: 50%;
+        margin: auto auto;
+    }
+
+    main article .about-image {
+        height: auto;
+        width: 55%;
+        padding-top: 18px;
+    }
+    
+    main article .about-description {
+        width: 45%;
+        padding-left: 10px;
+        padding-right: 40px;
+    }
+    
+    main article .icon img {
+        height: auto;
+        width: 300px;
+        margin: auto auto
+    }
+    
+    main article .about-image img {
+        height: auto;
+        width: 55%;
+        display: block;
+    }
+
+    /* Footer */
+
+    footer article {
+        width: 850px;
+        margin: 30px auto;
+    }
+
+    footer .icons {
+        height: auto;
+        width: 40%;
+    }
+
+    footer .icons img {
+        height: 168px;
+        width: 168px;
+        padding-top: 5px;
+    }
+
+    footer .icons icons img {
+        height: 28px;
+        width: 28px;
+        padding: 4px 4px;
+        border: 2px solid #8abbff;
+        margin-right: 15px;
+    }
+
+    footer .info {
+        width: 60%;
+    }
+
+    footer .copyright {
+        width: 850px;
+        margin: 20px auto;
+    }
 }
