@@ -7,43 +7,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Web Design</title>
     <link href="../Stylesheet/general.css" type="text/css" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script> 
+    $(function(){
+    $("#header").load("header.html"); 
+    $("#footer").load("footer.html"); 
+    });
+    </script> 
 </head>
 <body>
     <header>
-        <!-- Navigation Bar -->
-        <div id="navigation">
-            <div class="info">
-                <img class="logo" src="../Resources/Logo/logo-letters.png">
-                <nav>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../About/about.html">About</a></li>
-                    <li><a href="../Algorithms/algorithms.html">Algorithms</a></li>
-                    <li><a href="./web-design.html">Web Design</a></li>
-                    <li><a href="../Games/games.html">Games</a></li>
-                </nav>
-            </div>
-        </div>
-        <div id="banner" class="general">
-            <div class="banner-text">
-                <h1>Fast & Secure</h1>
-            </div>
-        </div>
-        <script>
-            window.onscroll = function() {
-                let element = document.getElementById("banner");
-                let banner = element.getBoundingClientRect();
-                var currentScrollPos = window.pageYOffset;
-                if (banner.height > currentScrollPos) {
-                    document.getElementById("navigation").style.backgroundColor = "None";
-                } else {
-                    document.getElementById("navigation").style.backgroundColor = "#3B5998";
-                }
-            }
-        </script>
+        <div id="header"></div>
     </header>
-
     <main>
         <div class="spacer"></div>
         <article class="flex">
@@ -62,43 +39,8 @@
         </article>
         <hr>
     </main>
-
     <footer>
-        <!-- Contact Information -->
-        <article class="flex">
-            <div class="icons">
-                <img src="../Resources/Logo/logo.png" alt="logo">
-                <icons class="flex">
-                    <a href="https://www.linkedin.com/in/abdulrahman-jouhari/"><img src="../Resources/Icons/linkedin-icon.png"></a>
-                    <a href="https://github.com/ajouhari"><img src="../Resources/Icons/github-icon.png"></a>
-                    <a href="https://stackoverflow.com/users/13521143/abdulrahman-jouhari?tab=profile"><img src="../Resources/Icons/stack-overflow-icon.png"></a>
-                </icons>
-            </div>
-            <div class="footer-navigation">
-                <h2>Menu:</h2>
-                <nav>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../About/about.html">About</a></li>
-                    <li><a href="../Algorithms/algorithms.html">Algorithms</a></li>
-                    <li><a href="./web-design.html">Web Design</a></li>
-                    <li><a href="../Games/games.html">Games</a></li>
-                </nav>
-            </div>
-            <div class="info">
-                <p>For any inquires, recommendations, or bug reports, please contact the email listed 
-                    below. I will try to reply within a reasonable amount of time. The site is under 
-                    construction and more projects are being worked on. Happy Coding :) <br> <br>
-                    For inquires: <br>
-                    official@ajouhari.com <br> <br>
-                    For reccomendations:<br>
-                    support@ajouhari.com</p>
-            </div>
-        </article>
-        <!-- Copyright Notice -->
-        <hr>
-        <div class="copyright">
-            <p>Copyright © 2020 AJouhari</p>
-        </div>
+        <div id="footer"></div>
     </footer>
 </body>
 </html>

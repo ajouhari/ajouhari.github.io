@@ -3,7 +3,7 @@ html {
   color: #fbfbfb;
   background-color: #1f1f1f;
   font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 body {
   margin: 0;
