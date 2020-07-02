@@ -170,7 +170,7 @@ hr {
 @media only screen and (min-width: 767px) and (max-width: 991px) {
     /* Container */
     article {
-        width: 700px;
+        width: 690px;
         padding: 50px 0;
     }
 
@@ -187,7 +187,7 @@ hr {
     
     /* Copyright */
     .copyright {
-        width: 700px;
+        width: 690px;
     }
 }
 @media only screen and (min-width: 991px) and (max-width: 1600px) {

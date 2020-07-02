@@ -3,7 +3,6 @@
     Date: June 26th, 2020 */
 
 /* General */
-
 html {
     box-sizing: border-box;
     color: #fbfbfb;
@@ -11,97 +10,77 @@ html {
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
 }
-
 body {
     margin: 0;
     padding: p;
 }
-
 p {
     line-height: 1.5;
     opacity: 0.6;
 }
-
 a {
     color: #fbfbfb;
     text-decoration: none;
     opacity: 0.87;
 }
-
-h1 {
-    font-size: xx-large;
-}
-
 h1, h2, h3, h4 {
     opacity: 0.87;
-}
-
-h2, h3, h4 {
     text-transform: lowercase;
 }
-
 hr {
     color: #fbfbfb;
     width: 1100px;
     opacity: 0.6;
 }
-
 article {
     width: 1050px;
     padding: 70px 0;
     margin: auto auto;
 }
-
-/* General Classes */
-
 .flex {
     display: flex;
 }
 
-/* Main */
-
-main article .mobile {
+/* Article */
+article .mobile {
     display: none;
 }
-
-main article .info,
-main article .icon {
+article .info,
+article .icon {
     height: auto;
     width: 50%;
 }
-
-main article .about-image {
-    height: auto;
-    width: 55%;
-    padding-top: 18px;
-}
-
-main article .about-description {
-    height: auto;
-    width: 45%;
-    padding-left: 10px;
-    padding-right: 40px;
-}
-
-main article .icon img {
+article .icon img {
     height: auto;
     width: 300px;
     display: block;
     margin: auto auto;
 }
 
-main article .about-image img {
+/* About Article */
+article .about-image {
+    height: auto;
+    width: 55%;
+    padding-top: 18px;
+}
+article .about-description {
+    height: auto;
+    width: 45%;
+    padding-left: 10px;
+    padding-right: 40px;
+}
+article .about-image img {
     height: 558px;
     width: auto;
     display: block;
     margin: auto auto;
 }
-
-main article .about-image-cropped {
+article .about-image-cropped {
     display: none;
 }
 
-main article .info button {
+/* Button */
+article .info button {
     padding: 8px 36px;
     margin-top: 10px;
     border: 2px solid #8abbff;
@@ -116,15 +95,13 @@ main article .info button {
     transition: all 0.5s;
     cursor: pointer;
 }
-
-main article .info button span {
+article .info button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
 }
-  
-main article .info button span:after {
+article .info button span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -132,482 +109,195 @@ main article .info button span:after {
     right: -20px;
     transition: 0.5s;
 }
-  
-main article .info button:hover span {
+article .info button:hover span {
     padding-right: 25px;
 }
-
-main article .info button:hover span:after {
+article .info button:hover span:after {
     opacity: 1;
     right: 0;
-}
-
-/* Footer */
-
-footer .footer-navigation {
-    height: auto;
-    width: 25%;
-    margin: 0 auto;
-    list-style-type: none;
-}
-
-footer .footer-navigation nav li {
-    opacity: 0.6;
-    margin-bottom: 17px;
-}
-
-footer .footer-navigation nav li:hover,
-footer .icons icons img:hover {
-    opacity: 1;
-}
-
-footer .icons {
-    height: auto;
-    width: 25%;
-    padding-top: 12px;
-}
-
-footer .icons img {
-    margin: 10px 0;
-    height: 160px;
-    width: 160px;
-}
-
-footer .icons icons img {
-    height: 24px;
-    width: 24px;
-    padding: 4px 4px;
-    border: 2px solid #8abbff;
-    margin-top: 0;
-    margin-right: 15px;
-    margin-left: 6px;
-    opacity: 0.6;
-    border-radius: 6px;
-}
-
-footer .info {
-    height: auto;
-    width: 50%;
-}
-
-footer .copyright {
-    width: 1050px;
-    margin: 20px auto;
-    color: #fbfbfb;
-    opacity: 1;
-}
-
-footer hr {
-    width: 100%;
-    color: #3B5998;
-    opacity: 0.6;
 }
 
 /* Adjusting For Screen Size */
 
 @media only screen and (max-width: 479px) {
-    
     /* General */
-
     hr {
         width: 90vw;
     }
-
     .flex {
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: column;
         flex-wrap: wrap;
     }
-
     article {
         width: 80vw;
         padding: 50px 0;
         flex-wrap: wrap;
     }
 
-    /* Header */
-
-    header #navigation .info {
-        width: 80vw;
-    }
-
-    header #navigation .info nav {
-        display: none;
-    }
-
-    header .dropdown {
-        display: initial;
-    }
-
-    body header .general {
-        height: 60vh;
-    }
-
-    body header #banner .banner-text h1 {
-        font-size: 70px;
-    }
-
-    /* Main */
-
-    main .spacer {
-        padding-top: 10px;
-    }
-
-    main article .info {
+    /* Article */
+    article .info {
         margin-top: 10px;
     }
-
-    main article .mobile {
+    article .mobile {
         height: auto;
-        width: 100%;
+        width: 80vw;
         display: initial;
     }
-
-    main article .icon {
+    article .icon {
         display: none;
     }
-
-    main article .info {
+    article .info {
         width: 100%;
         margin-top: 20px;
     }
-
-    main article .about-image {
-        display: none;
-    }
-    
-    main article .about-description {
-        width: 100%;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    main article .mobile img {
+    article .mobile img {
         height: auto;
-        width: 80%;
+        width: 250px;
         display: block;
         margin: auto auto;
     }
-    
-    main article .about-image img {
-        height: auto;
-        width: 90%;
-    }
 
-    /* Footer */
-
-    footer .icons {
+    /* About Article */
+    article .about-image {
         display: none;
     }
-
-    footer .footer-navigation nav li {
-        padding-bottom: 5px;
-        width: 40%;
-    }
-
-    footer .footer-navigation {
+    article .about-description {
         width: 100%;
+        padding: 0 0;
     }
-
-    footer .footer-navigation nav {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    footer .info {
-        width: 100%;
-    }
-
-    footer .copyright {
-        width: 320px;
-        margin: 20px auto;
-    }
-    
 } 
 
 @media only screen and (min-width: 479px) and (max-width: 767px){
-
-
     /* General */
-
     hr {
-        width: 650px;
+        width: 80vw;
     }
-
     .flex {
         display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    article {
+        width: 70vw;
+        padding: 50px 0;
         flex-wrap: wrap;
     }
 
-    /* Header */
-
-    header #navigation .info {
-        width: 600px;
+    /* Article */
+    article .info {
+        margin-top: 10px;
     }
-
-    header #navigation .info nav {
+    article .mobile {
+        height: auto;
+        width: 70vw;
+        display: initial;
+    }
+    article .icon {
         display: none;
     }
-
-    body header .general {
-        height: 60vh;
-    }
-
-    body header #banner .banner-text h1 {
-        font-size: 70px;
-    }
-
-    /* Main */
-
-    main .spacer {
-        display: none;
-    }
-
-    main article {
-        width: 600px;
-        padding: 50px 0;
-    }
-    
-    main article .info,
-    main article .icon {
-        width: 50%;
-        margin: auto auto;
-    }
-
-    main article .about-image {
-        display: none;
-    }
-    
-    main article .about-description {
+    article .info {
         width: 100%;
+        margin-top: 20px;
     }
-    
-    main article .icon img {
+    article .mobile img {
         height: auto;
         width: 250px;
+        display: block;
         margin: auto auto;
     }
 
-    /* Footer */
-
-    footer article {
-        width: 600px;
-        margin: 30px auto;
+    /* About Article */
+    article .about-image {
+        display: none;
     }
-
-    footer .icons {
-        height: auto;
-        width: 40%;
-    }
-
-    footer .icons img {
-        height: 188px;
-        width: 188px;
-        padding-top: 5px;
-    }
-
-    footer .icons icons img {
-        height: 32px;
-        width: 32px;
-        padding: 4px 4px;
-        border: 2px solid #8abbff;
-        margin-right: 15px;
-    }
-
-    footer .info {
-        width: 60%;
-    }
-
-    footer .copyright {
-        width: 600px;
-        margin: 20px auto;
-    }
-
-    footer .footer-navigation nav li,
-    footer .footer-navigation h2 {
-        margin: auto;
+    article .about-description {
+        width: 100%;
+        padding: 0 0;
     }
 }
 
 @media only screen and (min-width: 767px) and (max-width: 991px){
-
-
     /* General */
-
     hr {
-        width: 650px;
+        width: 710px;
+    }
+    article {
+        width: 680px;
+        padding: 50px 0;
     }
 
-    .flex {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    /* Header */
-
-    header #navigation .info {
-        width: 600px;
-    }
-
-    header #navigation .info nav {
-        display: none;
-    }
-
-    body header .general {
-        height: 60vh;
-    }
-
-    body header #banner .banner-text h1 {
-        font-size: 70px;
-    }
-
-    /* Main */
-
-    main .spacer {
-        display: none;
-    }
-
-    main article {
+    /* Article */
+    article {
         width: 600px;
         padding: 50px 0;
     }
-    
-    main article .info,
-    main article .icon {
-        width: 50%;
-        margin: auto auto;
+    article .icon {
+        position: relative;
+        margin-left: 50px;
     }
-
-    main article .about-image {
-        display: none;
-    }
-    
-    main article .about-description {
-        width: 100%;
-    }
-    
-    main article .icon img {
+    article .icon img {
         height: auto;
         width: 250px;
-        margin: auto auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
-    /* Footer */
-
-    footer article {
-        width: 600px;
-        margin: 30px auto;
+    /* About Article */
+    article .about-image {
+        display: none;
     }
-
-    footer .icons {
-        height: auto;
-        width: 40%;
-    }
-
-    footer .icons img {
-        height: 188px;
-        width: 188px;
-        padding-top: 5px;
-    }
-
-    footer .icons icons img {
-        height: 32px;
-        width: 32px;
-        padding: 4px 4px;
-        border: 2px solid #8abbff;
-        margin-right: 15px;
-    }
-
-    footer .info {
-        width: 60%;
-    }
-
-    footer .copyright {
-        width: 600px;
-        margin: 20px auto;
+    article .about-description {
+        width: 100%;
     }
 }
 
 @media only screen and (min-width: 991px) and (max-width: 1600px){
-
     /* General */
-
     hr {
         width: 950px;
     }
 
-    .flex {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    /* Header */
-
-    header #navigation .info {
-        width: 850px;
-    }
-
-    body header .general {
-        height: 60vh;
-    }
-
-    body header #banner .banner-text h1 {
-        font-size: 70px;
-    }
-
-    /* Main */
-
-    main .spacer {
+    /* Article */
+    .spacer {
         padding-top: 10px;
     }
-
-    main article {
+    article {
         width: 850px;
         padding: 50px 0;
     }
-    
-    main article .info,
-    main article .icon {
+    article .info,
+    article .icon {
         width: 50%;
         margin: auto auto;
     }
-
-    main .about {
+    article .icon img {
+        margin: auto auto;
+    }
+    
+    /* About Article */
+    .about {
         flex-wrap: nowrap;
     }
-
-    main article .about-image {
+    article .about-image {
         display: none;
     }
-
-    main article .about-image-cropped {
+    article .about-image-cropped {
         display: initial;
         height: auto;
         width: 40%;
         padding-top: 18px;
     }
-    
-    main article .about-description {
+    article .about-description {
         width: 60%;
         padding-left: 20px;
         padding-right: 0;
     }
-    
-    main article .about-image-cropped img {
+    article .about-image-cropped img {
         height: auto;
         width: 100%;
         display: block;
-    }
-
-    /* Footer */
-
-    footer article {
-        width: 850px;
-        margin: 30px auto;
-    }
-
-    footer .copyright {
-        width: 850px;
-        margin: 20px auto;
     }
 }
