@@ -14,43 +14,43 @@ body {
     margin: 0;
     padding: p;
 }
-p {
+main p {
     line-height: 1.5;
     opacity: 0.6;
 }
-a {
+main a {
     color: #fbfbfb;
     text-decoration: none;
     opacity: 0.87;
 }
-h1, h2, h3, h4 {
+main h1, main h2, main h3, main h4 {
     opacity: 0.87;
     text-transform: lowercase;
 }
-hr {
+main hr {
     color: #fbfbfb;
     width: 1100px;
     opacity: 0.6;
 }
-article {
+main article {
     width: 1050px;
     padding: 70px 0;
     margin: auto auto;
 }
-.flex {
+main .flex {
     display: flex;
 }
 
 /* Article */
-article .mobile {
+main article .mobile {
     display: none;
 }
-article .info,
-article .icon {
+main article .info,
+main article .icon {
     height: auto;
     width: 50%;
 }
-article .icon img {
+main article .icon img {
     height: auto;
     width: 300px;
     display: block;
@@ -58,29 +58,29 @@ article .icon img {
 }
 
 /* About Article */
-article .about-image {
+main article .about-image {
     height: auto;
     width: 55%;
     padding-top: 18px;
 }
-article .about-description {
+main article .about-description {
     height: auto;
     width: 45%;
     padding-left: 10px;
     padding-right: 40px;
 }
-article .about-image img {
+main article .about-image img {
     height: 558px;
     width: auto;
     display: block;
     margin: auto auto;
 }
-article .about-image-cropped {
+main article .about-image-cropped {
     display: none;
 }
 
 /* Button */
-article .info button {
+main article .info button {
     padding: 8px 36px;
     margin-top: 10px;
     border: 2px solid #8abbff;
@@ -95,13 +95,13 @@ article .info button {
     transition: all 0.5s;
     cursor: pointer;
 }
-article .info button span {
+main article .info button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
 }
-article .info button span:after {
+main article .info button span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -109,10 +109,10 @@ article .info button span:after {
     right: -20px;
     transition: 0.5s;
 }
-article .info button:hover span {
+main article .info button:hover span {
     padding-right: 25px;
 }
-article .info button:hover span:after {
+main article .info button:hover span:after {
     opacity: 1;
     right: 0;
 }
@@ -121,37 +121,37 @@ article .info button:hover span:after {
 
 @media only screen and (max-width: 479px) {
     /* General */
-    hr {
+    main hr {
         width: 90vw;
     }
-    .flex {
+    main .flex {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
     }
-    article {
+    main article {
         width: 80vw;
         padding: 50px 0;
         flex-wrap: wrap;
     }
 
     /* Article */
-    article .info {
+    main article .info {
         margin-top: 10px;
     }
-    article .mobile {
+    main article .mobile {
         height: auto;
         width: 80vw;
         display: initial;
     }
-    article .icon {
+    main article .icon {
         display: none;
     }
-    article .info {
+    main article .info {
         width: 100%;
         margin-top: 20px;
     }
-    article .mobile img {
+    main article .mobile img {
         height: auto;
         width: 250px;
         display: block;
@@ -159,10 +159,10 @@ article .info button:hover span:after {
     }
 
     /* About Article */
-    article .about-image {
+    main article .about-image {
         display: none;
     }
-    article .about-description {
+    main article .about-description {
         width: 100%;
         padding: 0 0;
     }
@@ -170,37 +170,37 @@ article .info button:hover span:after {
 
 @media only screen and (min-width: 479px) and (max-width: 767px){
     /* General */
-    hr {
+    main hr {
         width: 80vw;
     }
-    .flex {
+    main .flex {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
     }
-    article {
+    main article {
         width: 70vw;
         padding: 50px 0;
         flex-wrap: wrap;
     }
 
     /* Article */
-    article .info {
+    main article .info {
         margin-top: 10px;
     }
-    article .mobile {
+    main article .mobile {
         height: auto;
         width: 70vw;
         display: initial;
     }
-    article .icon {
+    main article .icon {
         display: none;
     }
-    article .info {
+    main article .info {
         width: 100%;
         margin-top: 20px;
     }
-    article .mobile img {
+    main article .mobile img {
         height: auto;
         width: 250px;
         display: block;
@@ -208,10 +208,10 @@ article .info button:hover span:after {
     }
 
     /* About Article */
-    article .about-image {
+    main article .about-image {
         display: none;
     }
-    article .about-description {
+    main article .about-description {
         width: 100%;
         padding: 0 0;
     }
@@ -219,24 +219,24 @@ article .info button:hover span:after {
 
 @media only screen and (min-width: 767px) and (max-width: 991px){
     /* General */
-    hr {
+    main hr {
         width: 710px;
     }
-    article {
+    main article {
         width: 680px;
         padding: 50px 0;
     }
 
     /* Article */
-    article {
+    main article {
         width: 600px;
         padding: 50px 0;
     }
-    article .icon {
+    main article .icon {
         position: relative;
         margin-left: 50px;
     }
-    article .icon img {
+    main article .icon img {
         height: auto;
         width: 250px;
         position: absolute;
@@ -246,56 +246,53 @@ article .info button:hover span:after {
     }
 
     /* About Article */
-    article .about-image {
+    main article .about-image {
         display: none;
     }
-    article .about-description {
+    main article .about-description {
         width: 100%;
     }
 }
 
 @media only screen and (min-width: 991px) and (max-width: 1600px){
     /* General */
-    hr {
+    main hr {
         width: 950px;
     }
 
     /* Article */
-    .spacer {
-        padding-top: 10px;
-    }
-    article {
+    main article {
         width: 850px;
         padding: 50px 0;
     }
-    article .info,
-    article .icon {
+    main article .info,
+    main article .icon {
         width: 50%;
         margin: auto auto;
     }
-    article .icon img {
+    main article .icon img {
         margin: auto auto;
     }
     
     /* About Article */
-    .about {
+    main .about {
         flex-wrap: nowrap;
     }
-    article .about-image {
+    main article .about-image {
         display: none;
     }
-    article .about-image-cropped {
+    main article .about-image-cropped {
         display: initial;
         height: auto;
         width: 40%;
         padding-top: 18px;
     }
-    article .about-description {
+    main article .about-description {
         width: 60%;
         padding-left: 20px;
         padding-right: 0;
     }
-    article .about-image-cropped img {
+    main article .about-image-cropped img {
         height: auto;
         width: 100%;
         display: block;
