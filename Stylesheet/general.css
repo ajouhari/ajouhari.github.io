@@ -23,8 +23,11 @@ main a {
     text-decoration: none;
     opacity: 0.87;
 }
-main h1, main h2, main h3, main h4 {
+.info h1 {
     opacity: 0.87;
+    text-transform: lowercase;
+}
+button span {
     text-transform: lowercase;
 }
 main hr {

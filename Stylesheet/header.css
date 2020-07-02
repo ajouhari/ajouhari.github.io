@@ -64,6 +64,8 @@ header .topnav .content nav li .icon {
   width: auto;
   font-size: 30px;
   margin-top: 10px;
+  color: #fff;
+  opacity: 1;
 }
 header .topnav .content nav li a:hover {
   text-decoration: underline;
@@ -89,7 +91,7 @@ header .banner {
 header .banner .banner-text h1 {
   font-size: 100px;
   font-weight: bold;
-  opacity: 0.87;
+  text-transform: lowercase;
 }
 header .banner .banner-text {
   text-align: center;
