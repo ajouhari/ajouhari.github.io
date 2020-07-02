@@ -60,11 +60,11 @@ header .topnav .content nav li a {
 }
 header .topnav .content nav li .icon {
   display: none;
-  height: 40px;
+  height: 35px;
   width: auto;
-  font-size: 30px;
-  margin-top: 10px;
-  color: #fff;
+  padding-top: 0;
+  padding-bottom: 42px;
+  margin-top: 0;
   opacity: 1;
 }
 header .topnav .content nav li a:hover {
