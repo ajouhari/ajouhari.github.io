@@ -4,33 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Header</title>
-  <link href="./Stylesheet/header.css" type="text/css" rel="stylesheet">
+  <link href="../stylesheets/header.css" type="text/css" rel="stylesheet">
+  <script src="../javascript/nav-dropdown.js"></script>
 </head>
 <body>
   <header>
     <div class="topnav" id="myTopnav">
       <div class="content">
-        <a href="./index.html"><img src="./Resources/Logo/logo-letters.png"></a>
+        <a href="./index.html"><img src="../images/logo/logo-letters.png"></a>
         <nav>
-          <li><a href="./index.html">Home</a></li>
+          <li><a href="./home.html">Home</a></li>
           <li><a href="./about.html">About</a></li>
           <li><a href="./algorithms.html">Algorithms</a></li>
           <li><a href="./web-design.html">Web Design</a></li>
           <li><a href="./games.html">Games</a></li>
-          <li><a href="javascript:void(0);" class="icon" onclick="myFunction()"><img src="./Resources/Icons/menu-icon.png"></a></li>
+          <li><a href="javascript:void(0);" class="icon" onclick="navDropdown()"><img src="../images/icons/menu-icon.png"></a></li>
         </nav>
       </div>
     </div>
-    <script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-    </script>
     <div class="banner">
       <div class="banner-text">
           <h1>Fast & Secure</h1>
