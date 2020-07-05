@@ -2,9 +2,20 @@
     Project: AJouhari Personal Website
     Date: July 2nd, 2020 */
 
+/* Transition */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 /* General */
 html {
     overflow: hidden;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
 /* Banner */
