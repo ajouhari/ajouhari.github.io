@@ -427,7 +427,7 @@ header .banner .text .buttons button span {
 
 /* ------------------------------------------------------------------------------------------------------
    ------------------------------------------------------------------------------------------------------  */
-/* About instructors */
+/* Main Article */
 main article {
     width: 1050px;
     padding: 70px 0;
@@ -439,12 +439,15 @@ main article .icon {
     height: auto;
     width: 50%;
 }
+main article .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 main article .icon img {
     height: auto;
     width: 300px;
     border-radius: 100%;
-    display: block;
-    margin: auto auto;
 }
 main hr {
     width: 1100px;
@@ -601,7 +604,6 @@ footer .footer-hr hr {
     main article .icon {
         height: auto;
         width: 70vw;
-        display: initial;
     }
     main article .info {
         width: 100%;
@@ -610,8 +612,6 @@ footer .footer-hr hr {
     main article .icon img {
         height: auto;
         width: 250px;
-        display: block;
-        margin: auto auto;
     }
     main article .info h1,
     main article .info p {
@@ -693,7 +693,6 @@ footer .footer-hr hr {
     main article .icon {
         height: auto;
         width: 70vw;
-        display: initial;
     }
     main article .info {
         width: 100%;
@@ -702,8 +701,6 @@ footer .footer-hr hr {
     main article .icon img {
         height: auto;
         width: 250px;
-        display: block;
-        margin: auto auto;
     }
 
     /* ------------------------------------------------------------------------------------------------------ */
@@ -752,27 +749,15 @@ footer .footer-hr hr {
     main hr {
         width: 710px;
     }
+
+    /* Article */
     main article {
         width: 680px;
         padding: 50px 0;
     }
-
-    /* Article */
-    main article {
-        width: 600px;
-        padding: 50px 0;
-    }
-    main article .icon {
-        position: relative;
-        margin-left: 50px;
-    }
     main article .icon img {
         height: auto;
         width: 250px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
 
     /* ------------------------------------------------------------------------------------------------------ */
