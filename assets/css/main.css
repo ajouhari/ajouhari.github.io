@@ -136,14 +136,14 @@ p {
 /* ------------------------------------------------------------------------------------------------------
    ------------------------------------------------------------------------------------------------------  */
 /* Navigation */
-.top-navigation {
+.top-navigation-background {
     position: fixed;
     display: block;
     top: 0;
     left: 0;
     height: 50px;
     width: 100%;
-    background: #fff;
+    background: #FFF;
     border-bottom: 1px solid #1f1f1f;
     overflow: hidden;
     -webkit-transition: all 0.5s ease-out, background 1s ease-out;
@@ -151,6 +151,21 @@ p {
     -webkit-transition-delay: 0.2s;
             transition-delay: 0.2s;
     z-index: 1;
+}
+.top-navigation {
+    position: fixed;
+    display: block;
+    height: 50px;
+    width: 1100px;
+    top: 0;
+    left: 50%;
+    margin-left: -550px; /* Negative half of width. */
+    overflow: hidden;
+    -webkit-transition: all 0.5s ease-out, background 1s ease-out;
+    transition: all 0.5s ease-out, background 1s ease-out;
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+    z-index: 2;
 }
 header .top-navigation .burger-container {
     visibility: hidden;
@@ -168,10 +183,11 @@ header .top-navigation .burger-container {
         -ms-user-select: none;
             user-select: none;
     -webkit-tap-highlight-color: transparent;
+    z-index: 2;
 }
 header .top-navigation .menu-row {
     position: fixed;
-    width: 80vw;
+    width: 1100px;
     height: 50px;
     top: 0;
     left: 50%;
@@ -287,7 +303,10 @@ header .top-navigation ul.menu li.menu-item a {
 }
 header .top-navigation.menu-opened {
     height: 100%;
-    background-color: #FFF;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin-left: 0;
     -webkit-transition: all 0.3s ease-in, background 0.5s ease-in;
     transition: all 0.3s ease-in, background 0.5s ease-in;
     -webkit-transition-delay: 0.25s;
@@ -552,8 +571,13 @@ footer .footer-hr hr {
 @media only screen and (max-width: 479px) {
     /* ------------------------------------------------------------------------------------------------------ */
     /* Navigation */
-    header .top-navigation {
-        position: fixed;
+    .top-navigation {
+        width: 100%;
+        left: 0;
+        margin-left: 0; /* Negative half of width. */
+    }
+    header .top-navigation .menu-row {
+        width: 100%;
     }
     header .top-navigation .menu-row img {
         position: absolute;
@@ -656,8 +680,13 @@ footer .footer-hr hr {
 @media only screen and (min-width: 479px) and (max-width: 767px){
     /* ------------------------------------------------------------------------------------------------------ */
     /* Navigation */
-    header .top-navigation {
-        position: fixed;
+    .top-navigation {
+        width: 100%;
+        left: 0;
+        margin-left: 0; /* Negative half of width. */
+    }
+    header .top-navigation .menu-row {
+        width: 100%;
     }
     header .top-navigation .menu-row img {
         position: absolute;
@@ -741,8 +770,15 @@ footer .footer-hr hr {
 @media only screen and (min-width: 767px) and (max-width: 991px){
     /* ------------------------------------------------------------------------------------------------------ */
     /* Navigation */
+    .top-navigation {
+        width: 710px;
+        margin-left: -355px; /* Negative half of width. */
+    }
+    header .top-navigation .menu-row {
+        width: 710px;
+    }
     header .top-navigation .menu-row ul.row-listed li a {
-        margin-left: 35px;
+        margin-left: 55px;
     }
     /* ------------------------------------------------------------------------------------------------------ */
     /* Main article */
@@ -789,8 +825,15 @@ footer .footer-hr hr {
 @media only screen and (min-width: 991px) and (max-width: 1600px){
     /* ------------------------------------------------------------------------------------------------------ */
     /* Navigation */
+    .top-navigation {
+        width: 950px;
+        margin-left: -475px; /* Negative half of width. */
+    }
+    header .top-navigation .menu-row {
+        width: 950px;
+    }
     header .top-navigation .menu-row ul.row-listed li a {
-        margin-left: 70px;
+        margin-left: 100px;
     }
     /* ------------------------------------------------------------------------------------------------------ */
     /* Main article */
