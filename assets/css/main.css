@@ -112,7 +112,7 @@ html {
     box-sizing: border-box;
     color: #1f1f1f;
     background-color: #fbfbfb;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -370,29 +370,6 @@ header .top-navigation.menu-opened .icon.icon-bag {
     -webkit-transition-delay: 0.3s;
             transition-delay: 0.3s;
 }
-header .content {
-    font-family: "Ek Mukta", sans-serif;
-    padding: 67px 4% 0;
-    text-align: justify;
-    overflow: scroll;
-    max-height: 100%;
-}
-header .content::-webkit-scrollbar {
-    display: none;
-}
-header .content h2 {
-    margin-bottom: 0px;
-    letter-spacing: 1px;
-}
-header .content img {
-    width: 95%;
-    position: relative;
-    display: block;
-    margin: 75px auto 75px;
-}
-header .content img:nth-of-type(2) {
-    margin: 75px auto;
-}
 
 /* ------------------------------------------------------------------------------------------------------
    ------------------------------------------------------------------------------------------------------  */
@@ -409,6 +386,9 @@ header .banner {
     left: 50%;
     transform: translate(-50%, 0);
     position: relative;
+}
+header .banner.short {
+    height: 30vw;
 }
 header .banner .text {
     text-align: center;
@@ -448,24 +428,24 @@ header .banner .text .buttons button span {
 
 /* ------------------------------------------------------------------------------------------------------
    ------------------------------------------------------------------------------------------------------  */
-/* Main Article */
-main article {
+/* About athletes */
+main article.athletes {
     width: 1050px;
     padding: 70px 0;
     margin: auto auto;
     display: flex;
 }
-main article .info,
-main article .icon {
+main article.athletes .info,
+main article.athletes .icon {
     height: auto;
     width: 50%;
 }
-main article .icon {
+main article.athletes .icon {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-main article .icon img {
+main article.athletes .icon img {
     height: auto;
     width: 300px;
     border-radius: 100%;
@@ -474,6 +454,27 @@ main hr {
     width: 1100px;
     color: #1f1f1f;
     opacity: 0.6;
+}
+
+/* ------------------------------------------------------------------------------------------------------
+   ------------------------------------------------------------------------------------------------------  */
+/* Products */
+main section.products {
+    width: 1100px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px auto;
+}
+main section.products figure {
+    margin: 30px 40px;
+}
+main section.products figure img {
+    height: auto;
+    width: 280px;
+}
+main section.products figure:hover h2 {
+    text-decoration: underline;
 }
 
 /* ------------------------------------------------------------------------------------------------------
@@ -619,29 +620,29 @@ footer .footer-hr hr {
     main hr {
         width: 90vw;
     }
-    main article {
+    main article.athletes {
         width: 70vw;
         padding: 50px 0;
         flex-wrap: wrap;
         flex-direction: column;
     }
-    main article .info {
+    main article.athletes .info {
         margin-top: 10px;
     }
-    main article .icon {
+    main article.athletes .icon {
         height: auto;
         width: 70vw;
     }
-    main article .info {
+    main article.athletes .info {
         width: 100%;
         margin-top: 20px;
     }
-    main article .icon img {
+    main article.athletes .icon img {
         height: auto;
         width: 250px;
     }
-    main article .info h1,
-    main article .info p {
+    main article.athletes .info h1,
+    main article.athletes .info p {
         text-align: center;
     }
 
@@ -730,25 +731,25 @@ footer .footer-hr hr {
     main hr {
         width: 80vw;
     }
-    main article {
+    main article.athletes {
         width: 70vw;
         padding: 50px 0;
         flex-wrap: wrap;
     }
 
     /* Article */
-    main article .info {
+    main article.athletes .info {
         margin-top: 10px;
     }
-    main article .icon {
+    main article.athletes .icon {
         height: auto;
         width: 70vw;
     }
-    main article .info {
+    main article.athletes .info {
         width: 100%;
         margin-top: 20px;
     }
-    main article .icon img {
+    main article.athletes .icon img {
         height: auto;
         width: 250px;
     }
@@ -827,11 +828,11 @@ footer .footer-hr hr {
     }
 
     /* Article */
-    main article {
+    main article.athletes {
         width: 680px;
         padding: 50px 0;
     }
-    main article .icon img {
+    main article.athletes .icon img {
         height: auto;
         width: 250px;
     }
@@ -901,16 +902,13 @@ footer .footer-hr hr {
     }
 
     /* Article */
-    main article {
+    main article.athletes {
         width: 850px;
         padding: 50px 0;
     }
-    main article .info,
-    main article .icon {
+    main article.athletes .info,
+    main article.athletes .icon {
         width: 50%;
-        margin: auto auto;
-    }
-    main article .icon img {
         margin: auto auto;
     }
 
