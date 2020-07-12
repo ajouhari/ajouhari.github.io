@@ -307,6 +307,7 @@ header .top-navigation.menu-opened {
     top: 0;
     left: 0;
     margin-left: 0;
+    background: #FFF;
     -webkit-transition: all 0.3s ease-in, background 0.5s ease-in;
     transition: all 0.3s ease-in, background 0.5s ease-in;
     -webkit-transition-delay: 0.25s;
@@ -595,6 +596,7 @@ footer .footer-hr hr {
         visibility: hidden; 
     }
 
+    /* ------------------------------------------------------------------------------------------------------ */
     /* Banner */
     header .banner .text h1 {
         font-size: 30px;
@@ -606,10 +608,10 @@ footer .footer-hr hr {
         margin-top: 30px;
         margin-left: 10px;
         margin-right: 10px;
-        width: 140px;
+        width: 120px;
     }
     header .banner .text .buttons button span {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     /* ------------------------------------------------------------------------------------------------------ */
@@ -705,6 +707,24 @@ footer .footer-hr hr {
     }
 
     /* ------------------------------------------------------------------------------------------------------ */
+    /* Banner */
+    header .banner .text h1 {
+        font-size: 48px;
+    }
+    header .banner .text .text-type {
+        font-size: 26px;
+    }
+    header .banner .text .buttons button {
+        margin-top: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 150px;
+    }
+    header .banner .text .buttons button span {
+        font-size: 22px;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
     /* Main article */
     /* General */
     main hr {
@@ -780,6 +800,25 @@ footer .footer-hr hr {
     header .top-navigation .menu-row ul.row-listed li a {
         margin-left: 55px;
     }
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* Banner */
+    header .banner .text h1 {
+        font-size: 60px;
+    }
+    header .banner .text .text-type {
+        font-size: 32px;
+    }
+    header .banner .text .buttons button {
+        margin-top: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 180px;
+    }
+    header .banner .text .buttons button span {
+        font-size: 24px;
+    }
+
     /* ------------------------------------------------------------------------------------------------------ */
     /* Main article */
     /* General */
@@ -835,6 +874,25 @@ footer .footer-hr hr {
     header .top-navigation .menu-row ul.row-listed li a {
         margin-left: 100px;
     }
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* Banner */
+    header .banner .text h1 {
+        font-size: 75px;
+    }
+    header .banner .text .text-type {
+        font-size: 35px;
+    }
+    header .banner .text .buttons button {
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 200px;
+    }
+    header .banner .text .buttons button span {
+        font-size: 30px;
+    }
+
     /* ------------------------------------------------------------------------------------------------------ */
     /* Main article */
     /* General */
