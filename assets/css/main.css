@@ -388,7 +388,7 @@ header .banner {
     position: relative;
 }
 header .banner.short {
-    height: 30vw;
+    height: 40vh;
 }
 header .banner .text {
     text-align: center;
@@ -465,9 +465,10 @@ main section.products {
     display: flex;
     flex-wrap: wrap;
     margin: 50px auto;
+    justify-content: space-between;
 }
 main section.products figure {
-    margin: 30px 40px;
+    margin: 30px 0;
 }
 main section.products figure img {
     height: auto;
@@ -616,7 +617,7 @@ footer .footer-hr hr {
     }
 
     /* ------------------------------------------------------------------------------------------------------ */
-    /* Main article */
+    /* About athletes */
     main hr {
         width: 90vw;
     }
@@ -644,6 +645,17 @@ footer .footer-hr hr {
     main article.athletes .info h1,
     main article.athletes .info p {
         text-align: center;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* Products */
+    main section.products {
+        width: 70vw;
+        margin: 50px auto;
+    }
+    main section.products figure img {
+        height: auto;
+        width: 70vw;
     }
 
     /* ------------------------------------------------------------------------------------------------------ */
@@ -726,7 +738,7 @@ footer .footer-hr hr {
     }
 
     /* ------------------------------------------------------------------------------------------------------ */
-    /* Main article */
+    /* About athletes */
     /* General */
     main hr {
         width: 80vw;
@@ -752,6 +764,17 @@ footer .footer-hr hr {
     main article.athletes .icon img {
         height: auto;
         width: 250px;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* Products */
+    main section.products {
+        width: 70vw;
+        margin: 50px auto;
+    }
+    main section.products figure img {
+        height: auto;
+        width: 30vw;
     }
 
     /* ------------------------------------------------------------------------------------------------------ */
@@ -799,7 +822,7 @@ footer .footer-hr hr {
         width: 710px;
     }
     header .top-navigation .menu-row ul.row-listed li a {
-        margin-left: 55px;
+        margin-left: 50px;
     }
 
     /* ------------------------------------------------------------------------------------------------------ */
@@ -821,7 +844,7 @@ footer .footer-hr hr {
     }
 
     /* ------------------------------------------------------------------------------------------------------ */
-    /* Main article */
+    /* About athletes */
     /* General */
     main hr {
         width: 710px;
@@ -835,6 +858,17 @@ footer .footer-hr hr {
     main article.athletes .icon img {
         height: auto;
         width: 250px;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* Products */
+    main section.products {
+        width: 680px;
+        margin: 50px auto;
+    }
+    main section.products figure img {
+        height: auto;
+        width: 300px;
     }
 
     /* ------------------------------------------------------------------------------------------------------ */
@@ -895,7 +929,7 @@ footer .footer-hr hr {
     }
 
     /* ------------------------------------------------------------------------------------------------------ */
-    /* Main article */
+    /* About athletes */
     /* General */
     main hr {
         width: 950px;
@@ -910,6 +944,17 @@ footer .footer-hr hr {
     main article.athletes .icon {
         width: 50%;
         margin: auto auto;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* Products */
+    main section.products {
+        width: 850px;
+        margin: 50px auto;
+    }
+    main section.products figure img {
+        height: auto;
+        width: 360px;
     }
 
     /* ------------------------------------------------------------------------------------------------------ */
