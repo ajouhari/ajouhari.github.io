@@ -169,7 +169,7 @@ header .top-navigation .burger-container {
             user-select: none;
     -webkit-tap-highlight-color: transparent;
 }
-header .top-navigation .content-container {
+header .top-navigation .menu-row {
     position: fixed;
     width: 80vw;
     height: 50px;
@@ -177,10 +177,10 @@ header .top-navigation .content-container {
     left: 50%;
     transform: translate(-50%, 0);
 }
-header .top-navigation .content-container img {
-    height: 20px;
+header .top-navigation .menu-row img {
+    height: 40px;
     float: left;
-    margin-top: 15px;
+    margin-top: 5px;
 }
 header .top-navigation .burger-container #burger {
     width: 18px;
@@ -216,22 +216,23 @@ header .top-navigation ul.menu {
     list-style: none;
     visibility: hidden;
 }
-header .top-navigation .content-container ul.row-listed {
+header .top-navigation .menu-row ul.row-listed {
     display: flex;
     float: right;
     height: 50px;
     list-style-type: none;
     text-decoration: none;
 }
-header .top-navigation .content-container ul.row-listed li a {
-    margin-left: 70px;
+header .top-navigation .menu-row ul.row-listed li a {
+    margin-left: 130px;
     color: #1f1f1f;
     list-style-type: none;
     text-decoration: none;
     opacity: 0.8;
 }
-header .top-navigation .content-container ul.row-listed li a:hover {
+header .top-navigation .menu-row ul.row-listed li a:hover {
     opacity: 1;
+    text-decoration: underline;
 }
 header .top-navigation ul.menu li.menu-item {
     border-bottom: 1px solid #333;
@@ -554,7 +555,7 @@ footer .footer-hr hr {
     header .top-navigation {
         position: fixed;
     }
-    header .top-navigation .content-container img {
+    header .top-navigation .menu-row img {
         position: absolute;
         margin-top: 25px;
         left: 50%;
@@ -566,7 +567,7 @@ footer .footer-hr hr {
     header .top-navigation ul.menu {
         visibility: visible;
     }
-    header .top-navigation .content-container ul.row-listed {
+    header .top-navigation .menu-row ul.row-listed {
         visibility: hidden; 
     }
 
@@ -658,7 +659,7 @@ footer .footer-hr hr {
     header .top-navigation {
         position: fixed;
     }
-    header .top-navigation .content-container img {
+    header .top-navigation .menu-row img {
         position: absolute;
         margin-top: 25px;
         left: 50%;
@@ -670,7 +671,7 @@ footer .footer-hr hr {
     header .top-navigation ul.menu {
         visibility: visible;
     }
-    header .top-navigation .content-container ul.row-listed {
+    header .top-navigation .menu-row ul.row-listed {
         visibility: hidden; 
     }
 
@@ -740,8 +741,8 @@ footer .footer-hr hr {
 @media only screen and (min-width: 767px) and (max-width: 991px){
     /* ------------------------------------------------------------------------------------------------------ */
     /* Navigation */
-    header .top-navigation .content-container ul.row-listed li a {
-        margin-left: 40px;
+    header .top-navigation .menu-row ul.row-listed li a {
+        margin-left: 35px;
     }
     /* ------------------------------------------------------------------------------------------------------ */
     /* Main article */
@@ -788,8 +789,8 @@ footer .footer-hr hr {
 @media only screen and (min-width: 991px) and (max-width: 1600px){
     /* ------------------------------------------------------------------------------------------------------ */
     /* Navigation */
-    header .top-navigation .content-container ul.row-listed li a {
-        margin-left: 50px;
+    header .top-navigation .menu-row ul.row-listed li a {
+        margin-left: 70px;
     }
     /* ------------------------------------------------------------------------------------------------------ */
     /* Main article */
