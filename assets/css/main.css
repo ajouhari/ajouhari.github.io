@@ -523,6 +523,11 @@ main .btn {
     border: 2px solid #1f1f1f;
     font-size: 22px;
 }
+main .btn.active {
+    background-color: #1279A1;
+    color: #FFF;
+}
+
 /* Filter menu */
 main ul.myBtnContainer {
     display: none;

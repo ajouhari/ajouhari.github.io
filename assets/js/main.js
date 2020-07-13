@@ -122,16 +122,6 @@ document.addEventListener('DOMContentLoaded', init)
 
 /* ------------------------------------------------------------------------------------------------------
    ------------------------------------------------------------------------------------------------------  */
-// Filter button
-(function(){
-    var filterButton = document.querySelector('.filter-dropdown'),
-    filterMenu = document.querySelector('.myBtnContainer');
-    
-        filterButton.onclick = function() {
-            filterMenu.classList.toggle('opened');
-    }
-}());
-
 // Product filters
 filterSelection("all")
 function filterSelection(c) {
