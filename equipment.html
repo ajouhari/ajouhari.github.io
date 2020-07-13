@@ -50,94 +50,46 @@
         <!-- Banner -->
         <section class="banner short" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/icons/scuba-diver.jpg);">
             <article class="text">
-                <h1>Bifins</h1>
+                <h1>Equipment</h1>
             </article>
         </section>
     </header>
     <main>
+        <div id="myBtnContainer">
+            <button class="btn" onclick="filterSelection('all')"> All</button>
+            <button class="btn" onclick="filterSelection('goggles')">Goggles</button>
+            <button class="btn" onclick="filterSelection('bifins')">Bifins</button>
+            <button class="btn" onclick="filterSelection('monofins')">Monofins</button>
+            <button class="btn" onclick="filterSelection('accessories')">Accessories</button>
+        </div>
         <!-- Equipment -->
-        <section class="products">
-            <figure class="hidden">
+        <section class="products container">
+            <figure class="hidden filterDiv bifins">
                 <img src="./images/icons/bifin.jpg" alt="">
                 <h2>Bifin</h2>
                 <figcaption>300 SAR</figcaption>
             </figure>
-            <figure class="hidden">
+            <figure class="hidden filterDiv bifins">
                 <img src="./images/icons/bifin.jpg" alt="">
                 <h2>Bifin</h2>
                 <figcaption>300 SAR</figcaption>
             </figure>
-            <figure class="hidden">
+            <figure class="hidden filterDiv bifins">
                 <img src="./images/icons/bifin.jpg" alt="">
                 <h2>Bifin</h2>
                 <figcaption>300 SAR</figcaption>
             </figure>
-            <figure class="hidden">
+            <figure class="hidden filterDiv bifins">
                 <img src="./images/icons/bifin.jpg" alt="">
                 <h2>Bifin</h2>
                 <figcaption>300 SAR</figcaption>
             </figure>
-            <figure class="hidden">
+            <figure class="hidden filterDiv bifins">
                 <img src="./images/icons/bifin.jpg" alt="">
                 <h2>Bifin</h2>
                 <figcaption>300 SAR</figcaption>
             </figure>
-            <figure class="hidden">
-                <img src="./images/icons/bifin.jpg" alt="">
-                <h2>Bifin</h2>
-                <figcaption>300 SAR</figcaption>
-            </figure>
-            <figure class="hidden">
-                <img src="./images/icons/bifin.jpg" alt="">
-                <h2>Bifin</h2>
-                <figcaption>300 SAR</figcaption>
-            </figure>
-            <figure class="hidden">
-                <img src="./images/icons/bifin.jpg" alt="">
-                <h2>Bifin</h2>
-                <figcaption>300 SAR</figcaption>
-            </figure>
-            <figure class="hidden">
-                <img src="./images/icons/bifin.jpg" alt="">
-                <h2>Bifin</h2>
-                <figcaption>300 SAR</figcaption>
-            </figure>
-            <figure class="hidden">
-                <img src="./images/icons/bifin.jpg" alt="">
-                <h2>Bifin</h2>
-                <figcaption>300 SAR</figcaption>
-            </figure>
-            <figure class="hidden">
-                <img src="./images/icons/bifin.jpg" alt="">
-                <h2>Bifin</h2>
-                <figcaption>300 SAR</figcaption>
-            </figure>
-            <figure class="hidden">
-                <img src="./images/icons/bifin.jpg" alt="">
-                <h2>Bifin</h2>
-                <figcaption>300 SAR</figcaption>
-            </figure>
-            <figure class="hidden">
-                <img src="./images/icons/bifin.jpg" alt="">
-                <h2>Bifin</h2>
-                <figcaption>300 SAR</figcaption>
-            </figure>
-            <figure class="hidden">
-                <img src="./images/icons/bifin.jpg" alt="">
-                <h2>Bifin</h2>
-                <figcaption>300 SAR</figcaption>
-            </figure>
-            <figure class="hidden">
-                <img src="./images/icons/bifin.jpg" alt="">
-                <h2>Bifin</h2>
-                <figcaption>300 SAR</figcaption>
-            </figure>
-            <figure class="hidden">
-                <img src="./images/icons/bifin.jpg" alt="">
-                <h2>Bifin</h2>
-                <figcaption>300 SAR</figcaption>
-            </figure>
-        </section><hr>
+        </section>
     </main>
     <footer>
         <!-- Icon and social media links -->
@@ -176,5 +128,6 @@
         </div>
     </footer>
     <script src="./assets/js/main.js"></script>
+    <script>filterSelection("all")</script>
 </body>
 </html>

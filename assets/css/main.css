@@ -289,7 +289,8 @@ header .top-navigation ul.menu li.menu-item:nth-child(7) {
     -webkit-transition-delay: 0.07s;
             transition-delay: 0.07s;
 }
-header .top-navigation ul.menu li.menu-item a {
+header .top-navigation ul.menu li.menu-item a,
+header .top-navigation ul.menu li.menu-item .submenu li a {
     display: block;
     position: relative;
     color: #1f1f1f;
@@ -370,7 +371,25 @@ header .top-navigation.menu-opened .icon.icon-bag {
     -webkit-transition-delay: 0.3s;
             transition-delay: 0.3s;
 }
-
+header .top-navigation ul.menu li.menu-item .submenu {
+    display: none;
+}
+header .top-navigation ul.menu li.menu-item .submenu.submenu-opened {
+    display: initial;
+}
+header .top-navigation ul.menu li.menu-item .submenu li a {
+    line-height: 2;
+    font-size: 20px;
+}
+header .top-navigation ul.menu li.menu-item .submenu li {
+    list-style: none;
+    margin-left: 35px;
+}
+header .top-navigation ul.menu li.menu-item .submenu-toggle span {
+    float: right;
+    margin-right: 20px;
+    transform: rotate(90deg);
+}
 /* ------------------------------------------------------------------------------------------------------
    ------------------------------------------------------------------------------------------------------  */
 /* Banner */
@@ -477,10 +496,51 @@ main section.products figure img {
 main section.products figure:hover h2 {
     text-decoration: underline;
 }
+.filterDiv {
+    display: none;
+}
+.show {
+    display: block;
+}
+.container {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+/* Style the buttons */
+main #myBtnContainer {
+    width: 1100px;
+    margin: auto auto;
+    display: flex;
+    justify-content: space-between;
+}
+main .btn {
+    margin-top: 40px;
+    padding: 10px 0;
+    width: 180px;
+    background-color: inherit;
+    opacity: 0.95;
+    border: 2px solid #1f1f1f;
+    font-size: 22px;
+}
+/* Filter menu */
+main ul.myBtnContainer {
+    display: none;
+}
+main ul.myBtnContainer.opened {
+    display: initial;
+}
 
 /* ------------------------------------------------------------------------------------------------------
    ------------------------------------------------------------------------------------------------------  */
 /* Footer */
+footer {
+    background-color: #1279A1;
+}
+footer h2,
+footer p {
+    color: #FFF;
+}
 footer article {
     width: 1050px;
     padding: 70px 0;
@@ -524,7 +584,7 @@ footer .social .logo {
 footer .social icons img {
     height: 24px;
     width: 24px;
-    border: 2px solid #3B5998;
+    border: 2px solid #FFF;
     border-radius: 6px;
     padding: 4px 4px;
     opacity: 0.6;
@@ -547,6 +607,9 @@ footer .navigation nav li {
     opacity: 0.6;
     margin-bottom: 17px;
 }
+footer .navigation nav li a {
+    color: #FFF;
+}
 
 /* Contact */
 footer .contact {
@@ -560,6 +623,7 @@ footer .copyright {
     margin: auto;
     color: #1f1f1f;
     opacity: 1;
+    padding-bottom: 10px;
 }
 footer .footer-hr hr {
     width: 100vw;
@@ -656,6 +720,19 @@ footer .footer-hr hr {
     main section.products figure img {
         height: auto;
         width: 70vw;
+    }
+
+    /* Buttons */
+    main #myBtnContainer {
+        width: 70vw;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+    main .btn {
+        margin-top: 10px;
+        padding: 10px 0;
+        width: 47%;
+        font-size: 18px;
     }
 
     /* ------------------------------------------------------------------------------------------------------ */
@@ -777,6 +854,19 @@ footer .footer-hr hr {
         width: 30vw;
     }
 
+    /* Buttons */
+    main #myBtnContainer {
+        width: 70vw;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+    main .btn {
+        margin-top: 10px;
+        padding: 10px 0;
+        width: 47%;
+        font-size: 18px;
+    }
+
     /* ------------------------------------------------------------------------------------------------------ */
     /* Footer */
     /* Container */
@@ -871,6 +961,15 @@ footer .footer-hr hr {
         width: 300px;
     }
 
+    /* Buttons */
+    main #myBtnContainer {
+        width: 680px;
+    }
+    main .btn {
+        width: 120px;
+        font-size: 18px;
+    }
+
     /* ------------------------------------------------------------------------------------------------------ */
     /* Footer */
     /* Container */
@@ -955,6 +1054,14 @@ footer .footer-hr hr {
     main section.products figure img {
         height: auto;
         width: 360px;
+    }
+
+    /* Buttons */
+    main #myBtnContainer {
+        width: 850px;
+    }
+    main .btn {
+        width: 150px;
     }
 
     /* ------------------------------------------------------------------------------------------------------ */
