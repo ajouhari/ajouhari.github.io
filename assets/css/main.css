@@ -40,8 +40,7 @@
     left: 0;
     -webkit-animation: shine 2.5s infinite cubic-bezier(0.42, 0, 0.58, 1);
             animation: shine 2.5s infinite cubic-bezier(0.42, 0, 0.58, 1);
-    background: rgba(255, 255, 255, 0.8);
-    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(50%, white), to(rgba(255, 255, 255, 0)));
+    background-color: rgba(255, 255, 255, 0.8);
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%, rgba(255, 255, 255, 0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
 }
@@ -146,8 +145,8 @@ p {
     background: #FFF;
     border-bottom: 1px solid #1f1f1f;
     overflow: hidden;
-    -webkit-transition: all 0.5s ease-out, background 1s ease-out;
-    transition: all 0.5s ease-out, background 1s ease-out;
+    -webkit-transition: all 0.5s ease-out, background-color 1s ease-out;
+    transition: all 0.5s ease-out, background-color 1s ease-out;
     -webkit-transition-delay: 0.2s;
             transition-delay: 0.2s;
     z-index: 1;
@@ -161,8 +160,8 @@ p {
     left: 50%;
     margin-left: -550px; /* Negative half of width. */
     overflow: hidden;
-    -webkit-transition: all 0.5s ease-out, background 1s ease-out;
-    transition: all 0.5s ease-out, background 1s ease-out;
+    -webkit-transition: all 0.5s ease-out, background-color 1s ease-out;
+    transition: all 0.5s ease-out, background-color 1s ease-out;
     -webkit-transition-delay: 0.2s;
             transition-delay: 0.2s;
     z-index: 2;
@@ -308,9 +307,9 @@ header .top-navigation.menu-opened {
     top: 0;
     left: 0;
     margin-left: 0;
-    background: #FFF;
-    -webkit-transition: all 0.3s ease-in, background 0.5s ease-in;
-    transition: all 0.3s ease-in, background 0.5s ease-in;
+    background-color: #FFF;
+    -webkit-transition: all 0.3s ease-in, background-color 0.5s ease-in;
+    transition: all 0.3s ease-in, background-color 0.5s ease-in;
     -webkit-transition-delay: 0.25s;
             transition-delay: 0.25s;
 }
