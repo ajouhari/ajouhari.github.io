@@ -130,7 +130,7 @@ span {
 }
 p {
     opacity: 0.87;
-    line-height: 1.5;
+    line-height: 2;
 }
 
 /* ------------------------------------------------------------------------------------------------------
@@ -240,7 +240,7 @@ header .top-navigation .menu-row ul.row-listed {
     text-decoration: none;
 }
 header .top-navigation .menu-row ul.row-listed li a {
-    margin-left: 130px;
+    margin-left: 100px;
     color: #1f1f1f;
     list-style-type: none;
     text-decoration: none;
@@ -447,6 +447,49 @@ header .banner .text .buttons button span {
 
 /* ------------------------------------------------------------------------------------------------------
    ------------------------------------------------------------------------------------------------------  */
+/* Main page articles */
+main div.full-width-background {
+    width: 100%;
+    background-color: #1279A1;
+}
+main article.main {
+    width: 1100px;
+    padding: 70px 0;
+    margin: auto auto;
+    display: flex;
+    justify-content: space-between;
+}
+main article.inverted {
+    flex-direction: row-reverse;
+    color: #FFF;
+}
+main article.inverted a {
+    color: #FFF;
+}
+main article.main .info,
+main article.main .icon {
+    height: auto;
+    width: 500px;
+}
+main article.main .icon {
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+main article.main img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+main a {
+    color: black;
+    text-decoration: none;
+}
+
+/* ------------------------------------------------------------------------------------------------------
+   ------------------------------------------------------------------------------------------------------  */
 /* About athletes */
 main article.athletes {
     width: 1050px;
@@ -479,18 +522,40 @@ main hr {
    ------------------------------------------------------------------------------------------------------  */
 /* Products */
 main section.products {
-    width: 1100px;
+    width: 1140px;
     height: auto;
     display: flex;
     flex-wrap: wrap;
     margin: 50px auto;
-    justify-content: space-between;
 }
 main section.products figure {
-    margin: 30px 0;
+    position: relative;
+    margin: 20px 20px;
+    background-color: #e7e7e7;
+    padding: 30px;
+    height: 350px;
+    width: 280px;
+}
+main section.products figure:hover img {
+    transform: scale(1.2);
+}
+main section.products figure .info {
+    position: absolute;
+    bottom: 40px;
+}
+main section.products figure .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
 }
 main section.products figure img {
-    height: auto;
+    height: 200px;
+    width: auto;
+    max-width: 280px;
+    transition: transform .3s;
+}
+main section.products figure hr {
     width: 280px;
 }
 main section.products figure:hover h2 {
@@ -561,7 +626,6 @@ footer h2 {
     opacity: 0.87;
 }
 footer p {
-    line-height: 1.5;
     opacity: 0.6;
 }
 footer a {
@@ -592,7 +656,7 @@ footer .social icons img {
     border: 2px solid #FFF;
     border-radius: 6px;
     padding: 4px 4px;
-    opacity: 0.6;
+    opacity: 0.8;
     margin-right: 16px;
     margin-left: 5px;
 }
@@ -610,7 +674,7 @@ footer .navigation nav {
 }
 footer .navigation nav li {
     opacity: 0.6;
-    margin-bottom: 17px;
+    margin-bottom: 21px;
 }
 footer .navigation nav li a {
     color: #FFF;
@@ -686,6 +750,33 @@ footer .footer-hr hr {
     }
 
     /* ------------------------------------------------------------------------------------------------------ */
+    /* Main page articles */
+    main div.full-width-background {
+        width: 100%;
+        background-color: #1279A1;
+    }
+    main article.main {
+        width: 80vw;
+        padding: 70px 0;
+        margin: auto auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    main article.main .info,
+    main article.main .icon {
+        width: 100%;
+        height: auto;
+    }
+    main article.main .icon {
+        background-image: none;
+        margin-bottom: 20px;
+    }
+    main article.main .icon img {
+        display: initial;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
     /* About athletes */
     main hr {
         width: 90vw;
@@ -719,12 +810,29 @@ footer .footer-hr hr {
     /* ------------------------------------------------------------------------------------------------------ */
     /* Products */
     main section.products {
-        width: 70vw;
+        width: 80vw;
         margin: 50px auto;
     }
+    main section.products figure {
+        margin: 20px 0;
+        padding: 30px;
+        height: 340px;
+        width: 100%;
+    }
+    main section.products figure .info {
+        position: absolute;
+        bottom: 30px;
+    }
+    main section.products figure .flex {
+        height: 250px;
+    }
     main section.products figure img {
-        height: auto;
-        width: 70vw;
+        height: 200px;
+        width: auto;
+        max-width: 65vw;
+    }
+    main section.products figure hr {
+        width: 65vw;
     }
 
     /* Buttons */
@@ -820,6 +928,33 @@ footer .footer-hr hr {
     }
 
     /* ------------------------------------------------------------------------------------------------------ */
+    /* Main page articles */
+    main div.full-width-background {
+        width: 100%;
+        background-color: #1279A1;
+    }
+    main article.main {
+        width: 70vw;
+        padding: 70px 0;
+        margin: auto auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    main article.main .info,
+    main article.main .icon {
+        width: 100vw;
+        height: auto;
+    }
+    main article.main .icon {
+        background-image: none;
+        margin-bottom: 20px;
+    }
+    main article.main .icon img {
+        display: initial;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
     /* About athletes */
     /* General */
     main hr {
@@ -854,9 +989,26 @@ footer .footer-hr hr {
         width: 70vw;
         margin: 50px auto;
     }
+    main section.products figure {
+        margin: 20px 0;
+        padding: 30px;
+        height: 340px;
+        width: 100%;
+    }
+    main section.products figure .info {
+        position: absolute;
+        bottom: 30px;
+    }
+    main section.products figure .flex {
+        height: 250px;
+    }
     main section.products figure img {
-        height: auto;
-        width: 30vw;
+        height: 200px;
+        width: auto;
+        max-width: 60vw;
+    }
+    main section.products figure hr {
+        width: 60vw;
     }
 
     /* Buttons */
@@ -917,7 +1069,7 @@ footer .footer-hr hr {
         width: 710px;
     }
     header .top-navigation .menu-row ul.row-listed li a {
-        margin-left: 50px;
+        margin-left: 35px;
     }
 
     /* ------------------------------------------------------------------------------------------------------ */
@@ -936,6 +1088,25 @@ footer .footer-hr hr {
     }
     header .banner .text .buttons button span {
         font-size: 24px;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* Main page articles */
+    main div.full-width-background {
+        width: 100%;
+        background-color: #1279A1;
+    }
+    main article.main {
+        width: 680px;
+        padding: 70px 0;
+        margin: auto auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    main article.main .info,
+    main article.main .icon {
+        width: 320px;
+        height: auto;
     }
 
     /* ------------------------------------------------------------------------------------------------------ */
@@ -958,13 +1129,31 @@ footer .footer-hr hr {
     /* ------------------------------------------------------------------------------------------------------ */
     /* Products */
     main section.products {
-        width: 680px;
+        width: 720px;
         margin: 50px auto;
     }
-    main section.products figure img {
-        height: auto;
-        width: 300px;
+    main section.products figure {
+        margin: 20px 20px;
+        padding: 30px;
+        height: 340px;
+        width: 260px;
     }
+    main section.products figure .info {
+        position: absolute;
+        bottom: 30px;
+    }
+    main section.products figure .flex {
+        height: 250px;
+    }
+    main section.products figure img {
+        height: 200px;
+        width: auto;
+        max-width: 260px;
+    }
+    main section.products figure hr {
+        width: 260px;
+    }
+
 
     /* Buttons */
     main #myBtnContainer {
@@ -1011,7 +1200,7 @@ footer .footer-hr hr {
         width: 950px;
     }
     header .top-navigation .menu-row ul.row-listed li a {
-        margin-left: 100px;
+        margin-left: 75px;
     }
 
     /* ------------------------------------------------------------------------------------------------------ */
@@ -1030,6 +1219,25 @@ footer .footer-hr hr {
     }
     header .banner .text .buttons button span {
         font-size: 30px;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* Main page articles */
+    main div.full-width-background {
+        width: 100%;
+        background-color: #1279A1;
+    }
+    main article.main {
+        width: 850px;
+        padding: 70px 0;
+        margin: auto auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    main article.main .info,
+    main article.main .icon {
+        width: 380px;
+        height: auto;
     }
 
     /* ------------------------------------------------------------------------------------------------------ */
@@ -1053,12 +1261,29 @@ footer .footer-hr hr {
     /* ------------------------------------------------------------------------------------------------------ */
     /* Products */
     main section.products {
-        width: 850px;
+        width: 880px;
         margin: 50px auto;
     }
+    main section.products figure {
+        margin: 20px 16px;
+        padding: 30px;
+        height: 340px;
+        width: 200px;
+    }
+    main section.products figure .info {
+        position: absolute;
+        bottom: 30px;
+    }
+    main section.products figure .flex {
+        height: 250px;
+    }
     main section.products figure img {
-        height: auto;
-        width: 360px;
+        height: 200px;
+        width: auto;
+        max-width: 210px;
+    }
+    main section.products figure hr {
+        width: 210px;
     }
 
     /* Buttons */
