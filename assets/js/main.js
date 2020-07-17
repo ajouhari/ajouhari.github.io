@@ -49,11 +49,11 @@ document.addEventListener('readystatechange', (event) => {
 /* ------------------------------------------------------------------------------------------------------
    ------------------------------------------------------------------------------------------------------  */
 // Dropdown menu function
-(function(){
+(function () {
   var burger = document.querySelector('.burger-container'),
-      header = document.querySelector('.top-navigation');
-  
-  burger.onclick = function() {
-      header.classList.toggle('menu-opened');
+    header = document.querySelector('.top-navigation');
+
+  burger.onclick = function () {
+    header.classList.toggle('menu-opened');
   }
 }());

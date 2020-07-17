@@ -165,22 +165,53 @@ header {
     width: 100vw;
     height: auto;
     overflow: hidden;
-    background: #f1f1f1;
+    background: #fbfbfb;
 }
 
 header .top-navigation {
-    position: absolute;
+    position: fixed;
     display: block;
     top: 0;
     left: 0;
     height: 50px;
     width: 100%;
-    background: #FFF;
+    background: #fbfbfb;
     overflow: hidden;
     transition: all 0.5s ease-out, background-color 1s ease-out;
     transition-delay: 0.2s;
     z-index: 1;
     border-bottom: 1px solid #1f1f1f;
+}
+
+header .row-listed-navigation {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+    height: 50px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+    align-items: center;
+}
+
+header .row-listed-navigation img {
+    height: 32px;
+    padding-top: 4px;
+    width: auto;
+}
+
+header .row-listed-navigation .row-menu {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header .row-listed-navigation .row-menu li a {
+    color: #1f1f1f;
+    text-decoration: none;
 }
 
 header .top-navigation .burger-container {
@@ -193,6 +224,8 @@ header .top-navigation .burger-container {
     transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     user-select: none;
     -webkit-tap-highlight-color: transparent;
+    visibility: hidden;
+    z-index: 10;
 }
 
 header .top-navigation .burger-container #burger {
@@ -279,7 +312,7 @@ header .top-navigation ul.menu li.menu-item a {
 
 header .top-navigation.menu-opened {
     height: 100%;
-    background-color: #FFF;
+    background-color: #fbfbfb;
     transition: all 0.3s ease-in, background-color 0.5s ease-in;
     transition-delay: 0.25s;
 }
@@ -362,13 +395,37 @@ header .content img:nth-of-type(2) {
     margin: 75px auto;
 }
 
-@media (max-width: 600px) {
+/* Adjusting For Screen Size */
 
-    header .top-navigation {
-        position: fixed;
+@media (max-width: 767px) {
+    header .top-navigation .burger-container {
+        visibility: visible;
+    }
+
+    header .row-listed-navigation {
+        width: 100px;
+    }
+
+    header .row-listed-navigation img {
+        margin: auto;
+    }
+
+    header .row-listed-navigation .row-menu {
+        visibility: hidden;
     }
 }
 
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+    header .row-listed-navigation {
+        width: 680px;
+    }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1600px) {
+    header .row-listed-navigation {
+        width: 850px;
+    }
+}
 
 /* ------------------------------------------------------------------------------------------------------
    ------------------------------------------------------------------------------------------------------  */
@@ -401,14 +458,14 @@ header .content img:nth-of-type(2) {
 
 .banner .text h1 {
     color: #fbfbfb;
-    font-size: 80px;
+    font-size: 75px;
     font-weight: bold;
     line-height: 0.4;
 }
 
 .banner .text .text-type {
     color: #fbfbfb;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 400;
     border-right: 2px solid #fbfbfb;
     padding-right: 5px;
@@ -419,7 +476,7 @@ header .content img:nth-of-type(2) {
     margin-left: 20px;
     margin-right: 20px;
     padding: 5px 0;
-    width: 250px;
+    width: 240px;
     background-color: inherit;
     opacity: 0.95;
     border: 2px solid #fbfbfb;
@@ -427,7 +484,95 @@ header .content img:nth-of-type(2) {
 
 .banner .text .buttons button span {
     color: #fbfbfb;
-    font-size: 30px;
+    font-size: 28px;
+}
+
+/* Adjusting For Screen Size */
+
+@media only screen and (max-width: 479px) {
+    .banner .text h1 {
+        font-size: 30px;
+    }
+
+    .banner .text .text-type {
+        font-size: 20px;
+    }
+
+    .banner .text .buttons button {
+        margin-top: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 120px;
+    }
+
+    .banner .text .buttons button span {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 479px) and (max-width: 767px) {
+    .banner .text h1 {
+        font-size: 48px;
+    }
+
+    .banner .text .text-type {
+        font-size: 26px;
+    }
+
+    .banner .text .buttons button {
+        margin-top: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 150px;
+    }
+
+    .banner .text .buttons button span {
+        font-size: 22px;
+    }
+
+}
+
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+    .banner .text h1 {
+        font-size: 60px;
+    }
+
+    .banner .text .text-type {
+        font-size: 32px;
+    }
+
+    .banner .text .buttons button {
+        margin-top: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 180px;
+    }
+
+    .banner .text .buttons button span {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1600px) {
+    .banner .text h1 {
+        font-size: 70px;
+    }
+
+    .banner .text .text-type {
+        font-size: 32px;
+    }
+
+    .banner .text .buttons button {
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 200px;
+    }
+
+    .banner .text .buttons button span {
+        font-size: 30px;
+    }
+
 }
 
 /* ------------------------------------------------------------------------------------------------------
@@ -480,6 +625,113 @@ main a {
     text-decoration: none;
 }
 
+/* Adjusting For Screen Size */
+
+@media only screen and (max-width: 479px) {
+    main div.full-width-background {
+        width: 100%;
+        background-color: #1279A1;
+    }
+
+    main article.main {
+        width: 80vw;
+        padding: 70px 0;
+        margin: auto auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    main article.main .info,
+    main article.main .icon {
+        width: 100%;
+        height: auto;
+    }
+
+    main article.main .icon {
+        background-image: none;
+        margin-bottom: 20px;
+    }
+
+    main article.main .icon img {
+        display: initial;
+    }
+}
+
+@media only screen and (min-width: 479px) and (max-width: 767px) {
+    main div.full-width-background {
+        width: 100%;
+        background-color: #1279A1;
+    }
+
+    main article.main {
+        width: 70vw;
+        padding: 70px 0;
+        margin: auto auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    main article.main .info,
+    main article.main .icon {
+        width: 100vw;
+        height: auto;
+    }
+
+    main article.main .icon {
+        background-image: none;
+        margin-bottom: 20px;
+    }
+
+    main article.main .icon img {
+        display: initial;
+    }
+
+}
+
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+    main div.full-width-background {
+        width: 100%;
+        background-color: #1279A1;
+    }
+
+    main article.main {
+        width: 680px;
+        padding: 70px 0;
+        margin: auto auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    main article.main .info,
+    main article.main .icon {
+        width: 320px;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1600px) {
+    main div.full-width-background {
+        width: 100%;
+        background-color: #1279A1;
+    }
+
+    main article.main {
+        width: 850px;
+        padding: 70px 0;
+        margin: auto auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    main article.main .info,
+    main article.main .icon {
+        width: 380px;
+        height: auto;
+    }
+}
+
 /* ------------------------------------------------------------------------------------------------------
    ------------------------------------------------------------------------------------------------------  */
 /* About athletes */
@@ -514,6 +766,109 @@ main hr {
     opacity: 0.6;
 }
 
+/* Adjusting For Screen Size */
+
+@media only screen and (max-width: 479px) {
+    main hr {
+        width: 90vw;
+    }
+
+    main article.athletes {
+        width: 70vw;
+        padding: 50px 0;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    main article.athletes .info {
+        margin-top: 10px;
+    }
+
+    main article.athletes .icon {
+        height: auto;
+        width: 70vw;
+    }
+
+    main article.athletes .info {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    main article.athletes .icon img {
+        height: auto;
+        width: 250px;
+    }
+
+    main article.athletes .info h1,
+    main article.athletes .info p {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 479px) and (max-width: 767px) {
+    main hr {
+        width: 80vw;
+    }
+
+    main article.athletes {
+        width: 70vw;
+        padding: 50px 0;
+        flex-wrap: wrap;
+    }
+
+    main article.athletes .info {
+        margin-top: 10px;
+    }
+
+    main article.athletes .icon {
+        height: auto;
+        width: 70vw;
+    }
+
+    main article.athletes .info {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    main article.athletes .icon img {
+        height: auto;
+        width: 250px;
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+    main hr {
+        width: 710px;
+    }
+
+    main article.athletes {
+        width: 680px;
+        padding: 50px 0;
+    }
+
+    main article.athletes .icon img {
+        height: auto;
+        width: 250px;
+    }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1600px) {
+    main hr {
+        width: 950px;
+    }
+
+    main article.athletes {
+        width: 850px;
+        padding: 50px 0;
+    }
+
+    main article.athletes .info,
+    main article.athletes .icon {
+        width: 50%;
+        margin: auto auto;
+    }
+}
+
 /* ------------------------------------------------------------------------------------------------------
    ------------------------------------------------------------------------------------------------------  */
 /* Products */
@@ -532,6 +887,7 @@ main section.products figure {
     padding: 30px;
     height: 350px;
     width: 280px;
+    border-radius: 4px;
 }
 
 main section.products figure:hover img {
@@ -593,6 +949,7 @@ main .btn {
     background-color: inherit;
     opacity: 0.95;
     border: 2px solid #1f1f1f;
+    border-radius: 4px;
     font-size: 22px;
 }
 
@@ -608,6 +965,190 @@ main ul.myBtnContainer {
 
 main ul.myBtnContainer.opened {
     display: initial;
+}
+
+
+/* Adjusting For Screen Size */
+
+@media only screen and (max-width: 479px) {
+    main section.products {
+        width: 80vw;
+        margin: 50px auto;
+    }
+
+    main section.products figure {
+        margin: 20px 0;
+        padding: 30px;
+        height: 340px;
+        width: 100%;
+    }
+
+    main section.products figure .info {
+        position: absolute;
+        bottom: 30px;
+    }
+
+    main section.products figure .flex {
+        height: 250px;
+    }
+
+    main section.products figure img {
+        height: 200px;
+        width: auto;
+        max-width: 65vw;
+    }
+
+    main section.products figure hr {
+        width: 65vw;
+    }
+
+    /* Buttons */
+    main #myBtnContainer {
+        width: 80vw;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    main .btn {
+        margin-top: 10px;
+        padding: 10px 0;
+        width: 47%;
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 479px) and (max-width: 767px) {
+    main section.products {
+        width: 70vw;
+        margin: 50px auto;
+    }
+
+    main section.products figure {
+        margin: 20px 0;
+        padding: 30px;
+        height: 340px;
+        width: 100%;
+    }
+
+    main section.products figure .info {
+        position: absolute;
+        bottom: 30px;
+    }
+
+    main section.products figure .flex {
+        height: 250px;
+    }
+
+    main section.products figure img {
+        height: 200px;
+        width: auto;
+        max-width: 60vw;
+    }
+
+    main section.products figure hr {
+        width: 60vw;
+    }
+
+    /* Buttons */
+    main #myBtnContainer {
+        width: 70vw;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    main .btn {
+        margin-top: 10px;
+        padding: 10px 0;
+        width: 47%;
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+    main section.products {
+        width: 720px;
+        margin: 50px auto;
+    }
+
+    main section.products figure {
+        margin: 20px 20px;
+        padding: 30px;
+        height: 340px;
+        width: 260px;
+    }
+
+    main section.products figure .info {
+        position: absolute;
+        bottom: 30px;
+    }
+
+    main section.products figure .flex {
+        height: 250px;
+    }
+
+    main section.products figure img {
+        height: 200px;
+        width: auto;
+        max-width: 260px;
+    }
+
+    main section.products figure hr {
+        width: 260px;
+    }
+
+
+    /* Buttons */
+    main #myBtnContainer {
+        width: 680px;
+    }
+
+    main .btn {
+        width: 120px;
+        font-size: 18px;
+    }
+
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1600px) {
+    main section.products {
+        width: 880px;
+        margin: 50px auto;
+    }
+
+    main section.products figure {
+        margin: 20px 16px;
+        padding: 30px;
+        height: 340px;
+        width: 200px;
+    }
+
+    main section.products figure .info {
+        position: absolute;
+        bottom: 30px;
+    }
+
+    main section.products figure .flex {
+        height: 250px;
+    }
+
+    main section.products figure img {
+        height: 200px;
+        width: auto;
+        max-width: 210px;
+    }
+
+    main section.products figure hr {
+        width: 210px;
+    }
+
+    /* Buttons */
+    main #myBtnContainer {
+        width: 850px;
+    }
+
+    main .btn {
+        width: 150px;
+    }
 }
 
 /* ------------------------------------------------------------------------------------------------------
@@ -720,151 +1261,9 @@ footer .footer-hr hr {
     opacity: 0.6;
 }
 
-/* ------------------------------------------------------------------------------------------------------
-   ------------------------------------------------------------------------------------------------------  */
 /* Adjusting For Screen Size */
 
 @media only screen and (max-width: 479px) {
-
-    /* ------------------------------------------------------------------------------------------------------ */
-    /* Banner */
-    .banner .text h1 {
-        font-size: 30px;
-    }
-
-    .banner .text .text-type {
-        font-size: 20px;
-    }
-
-    .banner .text .buttons button {
-        margin-top: 30px;
-        margin-left: 10px;
-        margin-right: 10px;
-        width: 120px;
-    }
-
-    .banner .text .buttons button span {
-        font-size: 18px;
-    }
-
-    /* ------------------------------------------------------------------------------------------------------ */
-    /* Main page articles */
-    main div.full-width-background {
-        width: 100%;
-        background-color: #1279A1;
-    }
-
-    main article.main {
-        width: 80vw;
-        padding: 70px 0;
-        margin: auto auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    main article.main .info,
-    main article.main .icon {
-        width: 100%;
-        height: auto;
-    }
-
-    main article.main .icon {
-        background-image: none;
-        margin-bottom: 20px;
-    }
-
-    main article.main .icon img {
-        display: initial;
-    }
-
-    /* ------------------------------------------------------------------------------------------------------ */
-    /* About athletes */
-    main hr {
-        width: 90vw;
-    }
-
-    main article.athletes {
-        width: 70vw;
-        padding: 50px 0;
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-
-    main article.athletes .info {
-        margin-top: 10px;
-    }
-
-    main article.athletes .icon {
-        height: auto;
-        width: 70vw;
-    }
-
-    main article.athletes .info {
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    main article.athletes .icon img {
-        height: auto;
-        width: 250px;
-    }
-
-    main article.athletes .info h1,
-    main article.athletes .info p {
-        text-align: center;
-    }
-
-    /* ------------------------------------------------------------------------------------------------------ */
-    /* Products */
-    main section.products {
-        width: 80vw;
-        margin: 50px auto;
-    }
-
-    main section.products figure {
-        margin: 20px 0;
-        padding: 30px;
-        height: 340px;
-        width: 100%;
-    }
-
-    main section.products figure .info {
-        position: absolute;
-        bottom: 30px;
-    }
-
-    main section.products figure .flex {
-        height: 250px;
-    }
-
-    main section.products figure img {
-        height: 200px;
-        width: auto;
-        max-width: 65vw;
-    }
-
-    main section.products figure hr {
-        width: 65vw;
-    }
-
-    /* Buttons */
-    main #myBtnContainer {
-        width: 70vw;
-        flex-wrap: wrap;
-        margin-top: 20px;
-    }
-
-    main .btn {
-        margin-top: 10px;
-        padding: 10px 0;
-        width: 47%;
-        font-size: 18px;
-    }
-
-    /* ------------------------------------------------------------------------------------------------------ */
-    /* Footer */
-    /* Container */
     footer article {
         width: 70vw;
         padding: 30px 0;
@@ -902,141 +1301,6 @@ footer .footer-hr hr {
 
 @media only screen and (min-width: 479px) and (max-width: 767px) {
 
-    /* ------------------------------------------------------------------------------------------------------ */
-    /* Banner */
-    .banner .text h1 {
-        font-size: 48px;
-    }
-
-    .banner .text .text-type {
-        font-size: 26px;
-    }
-
-    .banner .text .buttons button {
-        margin-top: 30px;
-        margin-left: 10px;
-        margin-right: 10px;
-        width: 150px;
-    }
-
-    .banner .text .buttons button span {
-        font-size: 22px;
-    }
-
-    /* ------------------------------------------------------------------------------------------------------ */
-    /* Main page articles */
-    main div.full-width-background {
-        width: 100%;
-        background-color: #1279A1;
-    }
-
-    main article.main {
-        width: 70vw;
-        padding: 70px 0;
-        margin: auto auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    main article.main .info,
-    main article.main .icon {
-        width: 100vw;
-        height: auto;
-    }
-
-    main article.main .icon {
-        background-image: none;
-        margin-bottom: 20px;
-    }
-
-    main article.main .icon img {
-        display: initial;
-    }
-
-    /* ------------------------------------------------------------------------------------------------------ */
-    /* About athletes */
-    /* General */
-    main hr {
-        width: 80vw;
-    }
-
-    main article.athletes {
-        width: 70vw;
-        padding: 50px 0;
-        flex-wrap: wrap;
-    }
-
-    /* Article */
-    main article.athletes .info {
-        margin-top: 10px;
-    }
-
-    main article.athletes .icon {
-        height: auto;
-        width: 70vw;
-    }
-
-    main article.athletes .info {
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    main article.athletes .icon img {
-        height: auto;
-        width: 250px;
-    }
-
-    /* ------------------------------------------------------------------------------------------------------ */
-    /* Products */
-    main section.products {
-        width: 70vw;
-        margin: 50px auto;
-    }
-
-    main section.products figure {
-        margin: 20px 0;
-        padding: 30px;
-        height: 340px;
-        width: 100%;
-    }
-
-    main section.products figure .info {
-        position: absolute;
-        bottom: 30px;
-    }
-
-    main section.products figure .flex {
-        height: 250px;
-    }
-
-    main section.products figure img {
-        height: 200px;
-        width: auto;
-        max-width: 60vw;
-    }
-
-    main section.products figure hr {
-        width: 60vw;
-    }
-
-    /* Buttons */
-    main #myBtnContainer {
-        width: 70vw;
-        flex-wrap: wrap;
-        margin-top: 20px;
-    }
-
-    main .btn {
-        margin-top: 10px;
-        padding: 10px 0;
-        width: 47%;
-        font-size: 18px;
-    }
-
-    /* ------------------------------------------------------------------------------------------------------ */
-    /* Footer */
-    /* Container */
     footer article {
         width: 70vw;
         padding: 50px 0;
@@ -1073,114 +1337,6 @@ footer .footer-hr hr {
 }
 
 @media only screen and (min-width: 767px) and (max-width: 991px) {
-
-    /* ------------------------------------------------------------------------------------------------------ */
-    /* Banner */
-    .banner .text h1 {
-        font-size: 60px;
-    }
-
-    .banner .text .text-type {
-        font-size: 32px;
-    }
-
-    .banner .text .buttons button {
-        margin-top: 30px;
-        margin-left: 10px;
-        margin-right: 10px;
-        width: 180px;
-    }
-
-    .banner .text .buttons button span {
-        font-size: 24px;
-    }
-
-    /* ------------------------------------------------------------------------------------------------------ */
-    /* Main page articles */
-    main div.full-width-background {
-        width: 100%;
-        background-color: #1279A1;
-    }
-
-    main article.main {
-        width: 680px;
-        padding: 70px 0;
-        margin: auto auto;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    main article.main .info,
-    main article.main .icon {
-        width: 320px;
-        height: auto;
-    }
-
-    /* ------------------------------------------------------------------------------------------------------ */
-    /* About athletes */
-    /* General */
-    main hr {
-        width: 710px;
-    }
-
-    /* Article */
-    main article.athletes {
-        width: 680px;
-        padding: 50px 0;
-    }
-
-    main article.athletes .icon img {
-        height: auto;
-        width: 250px;
-    }
-
-    /* ------------------------------------------------------------------------------------------------------ */
-    /* Products */
-    main section.products {
-        width: 720px;
-        margin: 50px auto;
-    }
-
-    main section.products figure {
-        margin: 20px 20px;
-        padding: 30px;
-        height: 340px;
-        width: 260px;
-    }
-
-    main section.products figure .info {
-        position: absolute;
-        bottom: 30px;
-    }
-
-    main section.products figure .flex {
-        height: 250px;
-    }
-
-    main section.products figure img {
-        height: 200px;
-        width: auto;
-        max-width: 260px;
-    }
-
-    main section.products figure hr {
-        width: 260px;
-    }
-
-
-    /* Buttons */
-    main #myBtnContainer {
-        width: 680px;
-    }
-
-    main .btn {
-        width: 120px;
-        font-size: 18px;
-    }
-
-    /* ------------------------------------------------------------------------------------------------------ */
-    /* Footer */
-    /* Container */
     footer article {
         width: 690px;
         padding: 50px 0;
@@ -1199,6 +1355,11 @@ footer .footer-hr hr {
         width: 70%;
     }
 
+    /* Navigation List */
+    footer .navigation nav li {
+        margin-bottom: 28px;
+    }
+
     /* Copyright */
     footer .copyright {
         width: 690px;
@@ -1206,115 +1367,8 @@ footer .footer-hr hr {
 }
 
 @media only screen and (min-width: 991px) and (max-width: 1600px) {
-
-    /* ------------------------------------------------------------------------------------------------------ */
-    /* Banner */
-    .banner .text h1 {
-        font-size: 75px;
-    }
-
-    .banner .text .text-type {
-        font-size: 35px;
-    }
-
-    .banner .text .buttons button {
-        margin-top: 30px;
-        margin-left: 20px;
-        margin-right: 20px;
-        width: 200px;
-    }
-
-    .banner .text .buttons button span {
-        font-size: 30px;
-    }
-
-    /* ------------------------------------------------------------------------------------------------------ */
-    /* Main page articles */
-    main div.full-width-background {
-        width: 100%;
-        background-color: #1279A1;
-    }
-
-    main article.main {
-        width: 850px;
-        padding: 70px 0;
-        margin: auto auto;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    main article.main .info,
-    main article.main .icon {
-        width: 380px;
-        height: auto;
-    }
-
-    /* ------------------------------------------------------------------------------------------------------ */
-    /* About athletes */
-    /* General */
-    main hr {
-        width: 950px;
-    }
-
-    /* Article */
-    main article.athletes {
-        width: 850px;
-        padding: 50px 0;
-    }
-
-    main article.athletes .info,
-    main article.athletes .icon {
-        width: 50%;
-        margin: auto auto;
-    }
-
-    /* ------------------------------------------------------------------------------------------------------ */
-    /* Products */
-    main section.products {
-        width: 880px;
-        margin: 50px auto;
-    }
-
-    main section.products figure {
-        margin: 20px 16px;
-        padding: 30px;
-        height: 340px;
-        width: 200px;
-    }
-
-    main section.products figure .info {
-        position: absolute;
-        bottom: 30px;
-    }
-
-    main section.products figure .flex {
-        height: 250px;
-    }
-
-    main section.products figure img {
-        height: 200px;
-        width: auto;
-        max-width: 210px;
-    }
-
-    main section.products figure hr {
-        width: 210px;
-    }
-
-    /* Buttons */
-    main #myBtnContainer {
-        width: 850px;
-    }
-
-    main .btn {
-        width: 150px;
-    }
-
-    /* ------------------------------------------------------------------------------------------------------ */
-    /* Footer */
-    /* Container */
     footer article {
-        width: 690px;
+        width: 850px;
         padding: 50px 0;
     }
 
