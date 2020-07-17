@@ -19,65 +19,304 @@
         </div>
     </div>
     <header>
-        <div class="top-navigation">
-          <div class="burger-container">
-            <div id="burger">
-              <div class="bar topBar"></div>
-              <div class="bar btmBar"></div>
-            </div>
-          </div>
-          <ul class="menu">
-            <li class="menu-item"><a href="#">Home</a></li>
-            <li class="menu-item"><a href="#">Athletes</a></li>
-            <li class="menu-item"><a href="#">Equipment</a></li>
-            <li class="menu-item"><a href="#">Courses</a></li>
-            <li class="menu-item"><a href="#">Boat Trips</a></li>
-            <li class="menu-item"><a href="#">Location</a></li>
-          </ul>
-        </div>
-    </header>
-    <main>
-        <!-- Banner -->
-        <section class="banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/icons/ocean.jpg);">
-            <article class="text">
-                <h1>Jeddah Freediving</h1>
-                <span class="text-type" data-wait="1500" data-words='["Quality equipment", "Awesome insructors", "What are you waiting for!"]'></span>
-                <div class="buttons">
-                    <button onclick="location.href='./equipment.html'" type="button"><span>Equiptment</span></button>
-                    <button onclick="location.href='#'" type="button"><span>Classes</span></button>
+        <!-- Navigation -->
+        <div class="top-navigation-background">
+            <div class="top-navigation">
+                <div class="burger-container">
+                    <div id="burger">
+                    <div class="bar topBar"></div>
+                    <div class="bar btmBar"></div>
+                    </div>
                 </div>
+                <ul class="menu">
+                    <li class="menu-item"><a href="./index.html">Home</a></li>
+                    <li class="menu-item"><a href="./athletes.html">Athletes</a></li>
+                    <li class="menu-item"><a href="#">Equipment</a></li>
+                    <li class="menu-item"><a href="#">Courses</a></li>
+                    <li class="menu-item"><a href="#">Boat Trips</a></li>
+                    <li class="menu-item"><a href="#">Location</a></li>
+                </ul>
+                <div class="menu-row">
+                    <a href="./index.html"><img src="./images/logo/logo-short.svg" alt=""></a>
+                    <ul class="row-listed">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./athletes.html">Athletes</a></li>
+                        <li><a href="#">Equipment</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Boat Trips</a></li>
+                        <li><a href="#">Location</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Banner -->
+        <section class="banner short" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/icons/scuba-diver.jpg);">
+            <article class="text">
+                <h1>Equipment</h1>
             </article>
         </section>
-        <!-- About athletes -->
-        <article class="main hidden">
-            <div class="icon" style="background-image: url(./images/icons/athletes.png);">
-                <img src="./images/icons/athletes.png" alt="">
-            </div>
-            <div class="info">
-                <a href="./athletes.html"><h1>Our Athletes</h1></a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu lobortis elementum nibh tellus molestie nunc non blandit. Morbi enim nunc faucibus a pellentesque sit. Massa vitae tortor condimentum lacinia quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam adipiscing vitae proin sagittis adipiscing nisl rhoncus mattis rhoncus urna.</p>
-            </div>
-        </article>
-        <div class="full-width-background">
-            <article class="main inverted hidden">
-                <div class="icon" style="background-image: url(./images/icons/equipment.jpg);">
-                    <img src="./images/icons/equipment.jpg" alt="">
+    </header>
+    <main>
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> All</button>
+            <button class="btn" onclick="filterSelection('goggles')">Goggles</button>
+            <button class="btn" onclick="filterSelection('bifins')">Bifins</button>
+            <button class="btn" onclick="filterSelection('monofins')">Monofins</button>
+            <button class="btn" onclick="filterSelection('accessories')">Accessories</button>
+        </div>
+        <!-- Equipment -->
+        <section class="products container">
+            <figure class="hidden filterDiv bifins">
+                <div class="flex">
+                    <img src="./images/icons/bifin.png" alt="">
                 </div>
                 <div class="info">
-                    <a href="./equipment.html"><h1>Equipment</h1></a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu lobortis elementum nibh tellus molestie nunc non blandit. Morbi enim nunc faucibus a pellentesque sit. Massa vitae tortor condimentum lacinia quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam adipiscing vitae proin sagittis adipiscing nisl rhoncus mattis rhoncus urna.</p>
+                    <hr>
+                    <h2>Bifin</h2>
+                    <figcaption>300 SAR</figcaption>
                 </div>
-            </article>
-        </div>
-        <article class="main hidden">
-            <div class="icon" style="background-image: url(./images/icons/courses.jpg);">
-                <img src="./images/icons/courses.jpg" alt="">
-            </div>
-            <div class="info">
-                <h1>Courses</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu lobortis elementum nibh tellus molestie nunc non blandit. Morbi enim nunc faucibus a pellentesque sit. Massa vitae tortor condimentum lacinia quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam adipiscing vitae proin sagittis adipiscing nisl rhoncus mattis rhoncus urna.</p>
-            </div>
-        </article>
+            </figure>
+            <figure class="hidden filterDiv bifins">
+                <div class="flex">
+                    <img src="./images/icons/bifin.png" alt="">
+                </div>
+                <div class="info">
+                    <hr>
+                    <h2>Bifin</h2>
+                    <figcaption>300 SAR</figcaption>
+                </div>
+            </figure>
+            <figure class="hidden filterDiv bifins">
+                <div class="flex">
+                    <img src="./images/icons/bifin.png" alt="">
+                </div>
+                <div class="info">
+                    <hr>
+                    <h2>Bifin</h2>
+                    <figcaption>300 SAR</figcaption>
+                </div>
+            </figure>
+            <figure class="hidden filterDiv bifins">
+                <div class="flex">
+                    <img src="./images/icons/bifin.png" alt="">
+                </div>
+                <div class="info">
+                    <hr>
+                    <h2>Bifin</h2>
+                    <figcaption>300 SAR</figcaption>
+                </div>
+            </figure>
+            <figure class="hidden filterDiv bifins">
+                <div class="flex">
+                    <img src="./images/icons/bifin.png" alt="">
+                </div>
+                <div class="info">
+                    <hr>
+                    <h2>Bifin</h2>
+                    <figcaption>300 SAR</figcaption>
+                </div>
+            </figure>
+            <figure class="hidden filterDiv bifins">
+                <div class="flex">
+                    <img src="./images/icons/bifin.png" alt="">
+                </div>
+                <div class="info">
+                    <hr>
+                    <h2>Bifin</h2>
+                    <figcaption>300 SAR</figcaption>
+                </div>
+            </figure>
+            <figure class="hidden filterDiv monofins">
+                <div class="flex">
+                    <img src="./images/icons/monofin.png" alt="">
+                </div>
+                <div class="info">
+                    <hr>
+                    <h2>Monofin</h2>
+                    <figcaption>300 SAR</figcaption>
+                </div>
+            </figure>
+            <figure class="hidden filterDiv monofins">
+                <div class="flex">
+                    <img src="./images/icons/monofin.png" alt="">
+                </div>
+                <div class="info">
+                    <hr>
+                    <h2>Monofin</h2>
+                    <figcaption>300 SAR</figcaption>
+                </div>
+            </figure>
+            <figure class="hidden filterDiv monofins">
+                <div class="flex">
+                    <img src="./images/icons/monofin.png" alt="">
+                </div>
+                <div class="info">
+                    <hr>
+                    <h2>Monofin</h2>
+                    <figcaption>300 SAR</figcaption>
+                </div>
+            </figure>
+            <figure class="hidden filterDiv monofins">
+                <div class="flex">
+                    <img src="./images/icons/monofin.png" alt="">
+                </div>
+                <div class="info">
+                    <hr>
+                    <h2>Monofin</h2>
+                    <figcaption>300 SAR</figcaption>
+                </div>
+            </figure>
+            <figure class="hidden filterDiv monofins">
+                <div class="flex">
+                    <img src="./images/icons/monofin.png" alt="">
+                </div>
+                <div class="info">
+                    <hr>
+                    <h2>Monofin</h2>
+                    <figcaption>300 SAR</figcaption>
+                </div>
+            </figure>
+            <figure class="hidden filterDiv goggles">
+                <div class="flex">
+                    <img src="./images/icons/goggles.png" alt="">
+                </div>
+                <div class="info">
+                    <hr>
+                    <h2>Goggles</h2>
+                    <figcaption>300 SAR</figcaption>
+                </div>
+            </figure>
+            <figure class="hidden filterDiv goggles">
+                <div class="flex">
+                    <img src="./images/icons/goggles.png" alt="">
+                </div>
+                <div class="info">
+                    <hr>
+                    <h2>Goggles</h2>
+                    <figcaption>300 SAR</figcaption>
+                </div>
+            </figure>
+            <figure class="hidden filterDiv goggles">
+                <div class="flex">
+                    <img src="./images/icons/goggles.png" alt="">
+                </div>
+                <div class="info">
+                    <hr>
+                    <h2>Goggles</h2>
+                    <figcaption>300 SAR</figcaption>
+                </div>
+            </figure>
+            <figure class="hidden filterDiv goggles">
+                <div class="flex">
+                    <img src="./images/icons/goggles.png" alt="">
+                </div>
+                <div class="info">
+                    <hr>
+                    <h2>Goggles</h2>
+                    <figcaption>300 SAR</figcaption>
+                </div>
+            </figure>
+            <figure class="hidden filterDiv goggles">
+                <div class="flex">
+                    <img src="./images/icons/goggles.png" alt="">
+                </div>
+                <div class="info">
+                    <hr>
+                    <h2>Goggles</h2>
+                    <figcaption>300 SAR</figcaption>
+                </div>
+            </figure>
+            <figure class="hidden filterDiv goggles">
+                <div class="flex">
+                    <img src="./images/icons/goggles.png" alt="">
+                </div>
+                <div class="info">
+                    <hr>
+                    <h2>Goggles</h2>
+                    <figcaption>300 SAR</figcaption>
+                </div>
+            </figure>
+            <figure class="hidden filterDiv accessories">
+                <div class="flex">
+                    <img src="./images/icons/watch.png" alt="">
+                </div>
+                <div class="info">
+                    <hr>
+                    <h2>Watch</h2>
+                    <figcaption>300 SAR</figcaption>
+                </div>
+            </figure>
+            <figure class="hidden filterDiv accessories">
+                <div class="flex">
+                    <img src="./images/icons/watch.png" alt="">
+                </div>
+                <div class="info">
+                    <hr>
+                    <h2>Watch</h2>
+                    <figcaption>300 SAR</figcaption>
+                </div>
+            </figure>
+            <figure class="hidden filterDiv accessories">
+                <div class="flex">
+                    <img src="./images/icons/watch.png" alt="">
+                </div>
+                <div class="info">
+                    <hr>
+                    <h2>Watch</h2>
+                    <figcaption>300 SAR</figcaption>
+                </div>
+            </figure>
+            <figure class="hidden filterDiv accessories">
+                <div class="flex">
+                    <img src="./images/icons/watch.png" alt="">
+                </div>
+                <div class="info">
+                    <hr>
+                    <h2>Watch</h2>
+                    <figcaption>300 SAR</figcaption>
+                </div>
+            </figure>
+            <figure class="hidden filterDiv accessories">
+                <div class="flex">
+                    <img src="./images/icons/nose-clip.png" alt="">
+                </div>
+                <div class="info">
+                    <hr>
+                    <h2>Nose Clip</h2>
+                    <figcaption>300 SAR</figcaption>
+                </div>
+            </figure>
+            <figure class="hidden filterDiv accessories">
+                <div class="flex">
+                    <img src="./images/icons/nose-clip.png" alt="">
+                </div>
+                <div class="info">
+                    <hr>
+                    <h2>Nose Clip</h2>
+                    <figcaption>300 SAR</figcaption>
+                </div>
+            </figure>
+            <figure class="hidden filterDiv accessories">
+                <div class="flex">
+                    <img src="./images/icons/nose-clip.png" alt="">
+                </div>
+                <div class="info">
+                    <hr>
+                    <h2>Nose Clip</h2>
+                    <figcaption>300 SAR</figcaption>
+                </div>
+            </figure>
+            <figure class="hidden filterDiv accessories">
+                <div class="flex">
+                    <img src="./images/icons/nose-clip.png" alt="">
+                </div>
+                <div class="info">
+                    <hr>
+                    <h2>Nose Clip</h2>
+                    <figcaption>300 SAR</figcaption>
+                </div>
+            </figure>
+        </section>
     </main>
     <footer>
         <!-- Icon and social media links -->
@@ -94,12 +333,12 @@
             <div class="navigation">
                 <h2>Quick Links:</h2>
                 <nav class="flex">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="./index.html">Home</a></li>
                     <li><a href="./athletes.html">Athletes</a></li>
-                    <li><a href="./equipment.html">Equipment</a></li>
+                    <li><a href="#">Equipment</a></li>
                     <li><a href="#">Courses</a></li>
                     <li><a href="#">Boat Trips</a></li>
-                    <li><a href="./location.html">Location</a></li>
+                    <li><a href="#">Location</a></li>
                 </nav>
             </div>
             <!-- Footer contact information -->
@@ -117,6 +356,7 @@
         </div>
     </footer>
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/typewriter.js"></script>
+    <script src="./assets/js/filter.js"></script>
+    <script>filterSelection("all")</script>
 </body>
 </html>

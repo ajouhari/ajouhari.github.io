@@ -43,8 +43,7 @@
     left: 0;
     -webkit-animation: shine 2.5s infinite cubic-bezier(0.42, 0, 0.58, 1);
     animation: shine 2.5s infinite cubic-bezier(0.42, 0, 0.58, 1);
-    background: rgba(255, 255, 255, 0.8);
-    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(50%, white), to(rgba(255, 255, 255, 0)));
+    background-color: rgba(255, 255, 255, 0.8);
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%, rgba(255, 255, 255, 0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#00ffffff', GradientType=1);
 }
@@ -133,7 +132,7 @@ html {
     box-sizing: border-box;
     color: #1f1f1f;
     background-color: #fbfbfb;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -151,18 +150,21 @@ span {
     font-size: 20px;
 }
 
+p {
+    opacity: 0.87;
+    line-height: 2;
+}
+
 /* ------------------------------------------------------------------------------------------------------
    ------------------------------------------------------------------------------------------------------  */
 /* Navigation */
 header {
     position: relative;
     display: block;
-    width: 360px;
-    height: 567px;
-    margin: 100px auto 0;
-    box-shadow: 0 0 65px 15px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    width: 100vw;
+    height: auto;
     overflow: hidden;
-    border-radius: 3px;
     background: #f1f1f1;
 }
 
@@ -173,11 +175,12 @@ header .top-navigation {
     left: 0;
     height: 50px;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: #FFF;
     overflow: hidden;
     transition: all 0.5s ease-out, background-color 1s ease-out;
     transition-delay: 0.2s;
     z-index: 1;
+    border-bottom: 1px solid #1f1f1f;
 }
 
 header .top-navigation .burger-container {
@@ -206,7 +209,7 @@ header .top-navigation .burger-container #burger .bar {
     height: 1px;
     display: block;
     position: relative;
-    background: #fff;
+    background: #1f1f1f;
     transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     transition-delay: 0s;
 }
@@ -265,7 +268,7 @@ header .top-navigation ul.menu li.menu-item:nth-child(7) {
 header .top-navigation ul.menu li.menu-item a {
     display: block;
     position: relative;
-    color: #fff;
+    color: #1f1f1f;
     font-weight: 100;
     text-decoration: none;
     font-size: 22px;
@@ -276,7 +279,7 @@ header .top-navigation ul.menu li.menu-item a {
 
 header .top-navigation.menu-opened {
     height: 100%;
-    background-color: #000;
+    background-color: #FFF;
     transition: all 0.3s ease-in, background-color 0.5s ease-in;
     transition-delay: 0.25s;
 }
@@ -360,12 +363,6 @@ header .content img:nth-of-type(2) {
 }
 
 @media (max-width: 600px) {
-    header {
-        width: 100%;
-        height: 100vh;
-        margin: 0;
-        border-radius: 0px;
-    }
 
     header .top-navigation {
         position: fixed;
@@ -378,13 +375,19 @@ header .content img:nth-of-type(2) {
 /* Banner */
 .banner {
     background-color: #1f1f1f;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100vw;
-    height: 30vh;
+    height: 50vh;
     top: 0;
-    margin-top: 50px;
     left: 50%;
     transform: translate(-50%, 0);
     position: relative;
+}
+
+.banner.short {
+    height: 40vh;
 }
 
 .banner .text {
@@ -416,7 +419,7 @@ header .content img:nth-of-type(2) {
     margin-left: 20px;
     margin-right: 20px;
     padding: 5px 0;
-    width: 200px;
+    width: 250px;
     background-color: inherit;
     opacity: 0.95;
     border: 2px solid #fbfbfb;
@@ -429,10 +432,907 @@ header .content img:nth-of-type(2) {
 
 /* ------------------------------------------------------------------------------------------------------
    ------------------------------------------------------------------------------------------------------  */
+/* Main page articles */
+main div.full-width-background {
+    width: 100%;
+    background-color: #1279A1;
+}
+
+main article.main {
+    width: 1100px;
+    padding: 70px 0;
+    margin: auto auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+main article.inverted {
+    flex-direction: row-reverse;
+    color: #FFF;
+}
+
+main article.inverted a {
+    color: #FFF;
+}
+
+main article.main .info,
+main article.main .icon {
+    height: auto;
+    width: 500px;
+}
+
+main article.main .icon {
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main article.main img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+main a {
+    color: black;
+    text-decoration: none;
+}
+
+/* ------------------------------------------------------------------------------------------------------
+   ------------------------------------------------------------------------------------------------------  */
+/* About athletes */
+main article.athletes {
+    width: 1050px;
+    padding: 70px 0;
+    margin: auto auto;
+    display: flex;
+}
+
+main article.athletes .info,
+main article.athletes .icon {
+    height: auto;
+    width: 50%;
+}
+
+main article.athletes .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main article.athletes .icon img {
+    height: auto;
+    width: 300px;
+    border-radius: 100%;
+}
+
+main hr {
+    width: 1100px;
+    color: #1f1f1f;
+    opacity: 0.6;
+}
+
+/* ------------------------------------------------------------------------------------------------------
+   ------------------------------------------------------------------------------------------------------  */
+/* Products */
+main section.products {
+    width: 1140px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px auto;
+}
+
+main section.products figure {
+    position: relative;
+    margin: 20px 20px;
+    background-color: #e7e7e7;
+    padding: 30px;
+    height: 350px;
+    width: 280px;
+}
+
+main section.products figure:hover img {
+    transform: scale(1.2);
+}
+
+main section.products figure .info {
+    position: absolute;
+    bottom: 40px;
+}
+
+main section.products figure .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+
+main section.products figure img {
+    height: 200px;
+    width: auto;
+    max-width: 280px;
+    transition: transform .3s;
+}
+
+main section.products figure hr {
+    width: 280px;
+}
+
+main section.products figure:hover h2 {
+    text-decoration: underline;
+}
+
+.filterDiv {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.container {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+/* Style the buttons */
+main #myBtnContainer {
+    width: 1100px;
+    margin: auto auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .btn {
+    margin-top: 40px;
+    padding: 10px 0;
+    width: 180px;
+    background-color: inherit;
+    opacity: 0.95;
+    border: 2px solid #1f1f1f;
+    font-size: 22px;
+}
+
+main .btn.active {
+    background-color: #1279A1;
+    color: #FFF;
+}
+
+/* Filter menu */
+main ul.myBtnContainer {
+    display: none;
+}
+
+main ul.myBtnContainer.opened {
+    display: initial;
+}
+
+/* ------------------------------------------------------------------------------------------------------
+   ------------------------------------------------------------------------------------------------------  */
+/* Footer */
+footer {
+    background-color: #1279A1;
+}
+
+footer h2,
+footer p {
+    color: #FFF;
+}
+
+footer article {
+    width: 1050px;
+    padding: 70px 0;
+    margin: auto auto;
+}
+
+footer .flex {
+    display: flex;
+}
+
+/* Text */
+footer h2 {
+    text-transform: lowercase;
+    opacity: 0.87;
+}
+
+footer p {
+    opacity: 0.6;
+}
+
+footer a {
+    color: #1f1f1f;
+    text-decoration: none;
+}
+
+/* Functions */
+footer .navigation nav li:hover,
+footer .social icons img:hover {
+    opacity: 1;
+}
+
+/* Logo & Social Links */
+footer .social {
+    height: auto;
+    width: 25%;
+}
+
+footer .social .logo {
+    height: 160px;
+    width: 160px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+footer .social icons img {
+    height: 24px;
+    width: 24px;
+    border: 2px solid #FFF;
+    border-radius: 6px;
+    padding: 4px 4px;
+    opacity: 0.8;
+    margin-right: 16px;
+    margin-left: 5px;
+}
+
+/* Footer Navigation (Quick Links) */
+footer .navigation {
+    height: auto;
+    width: 25%;
+    margin: 0 auto;
+    list-style-type: none;
+}
+
+footer .navigation nav {
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+footer .navigation nav li {
+    opacity: 0.6;
+    margin-bottom: 21px;
+}
+
+footer .navigation nav li a {
+    color: #FFF;
+}
+
+/* Contact */
+footer .contact {
+    height: auto;
+    width: 50%;
+}
+
+/* Copyright */
+footer .copyright {
+    width: 1050px;
+    margin: auto;
+    color: #1f1f1f;
+    opacity: 1;
+    padding-bottom: 10px;
+}
+
+footer .footer-hr hr {
+    width: 100vw;
+    color: #1f1f1f;
+    opacity: 0.6;
+}
+
+/* ------------------------------------------------------------------------------------------------------
+   ------------------------------------------------------------------------------------------------------  */
 /* Adjusting For Screen Size */
 
-@media only screen and (min-width: 479px) and (max-width: 767px) {}
+@media only screen and (max-width: 479px) {
 
-@media only screen and (min-width: 767px) and (max-width: 991px) {}
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* Banner */
+    .banner .text h1 {
+        font-size: 30px;
+    }
 
-@media only screen and (min-width: 991px) and (max-width: 1600px) {}
+    .banner .text .text-type {
+        font-size: 20px;
+    }
+
+    .banner .text .buttons button {
+        margin-top: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 120px;
+    }
+
+    .banner .text .buttons button span {
+        font-size: 18px;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* Main page articles */
+    main div.full-width-background {
+        width: 100%;
+        background-color: #1279A1;
+    }
+
+    main article.main {
+        width: 80vw;
+        padding: 70px 0;
+        margin: auto auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    main article.main .info,
+    main article.main .icon {
+        width: 100%;
+        height: auto;
+    }
+
+    main article.main .icon {
+        background-image: none;
+        margin-bottom: 20px;
+    }
+
+    main article.main .icon img {
+        display: initial;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* About athletes */
+    main hr {
+        width: 90vw;
+    }
+
+    main article.athletes {
+        width: 70vw;
+        padding: 50px 0;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    main article.athletes .info {
+        margin-top: 10px;
+    }
+
+    main article.athletes .icon {
+        height: auto;
+        width: 70vw;
+    }
+
+    main article.athletes .info {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    main article.athletes .icon img {
+        height: auto;
+        width: 250px;
+    }
+
+    main article.athletes .info h1,
+    main article.athletes .info p {
+        text-align: center;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* Products */
+    main section.products {
+        width: 80vw;
+        margin: 50px auto;
+    }
+
+    main section.products figure {
+        margin: 20px 0;
+        padding: 30px;
+        height: 340px;
+        width: 100%;
+    }
+
+    main section.products figure .info {
+        position: absolute;
+        bottom: 30px;
+    }
+
+    main section.products figure .flex {
+        height: 250px;
+    }
+
+    main section.products figure img {
+        height: 200px;
+        width: auto;
+        max-width: 65vw;
+    }
+
+    main section.products figure hr {
+        width: 65vw;
+    }
+
+    /* Buttons */
+    main #myBtnContainer {
+        width: 70vw;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    main .btn {
+        margin-top: 10px;
+        padding: 10px 0;
+        width: 47%;
+        font-size: 18px;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* Footer */
+    /* Container */
+    footer article {
+        width: 70vw;
+        padding: 30px 0;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    /* Subcontainers */
+    footer .social {
+        display: none;
+    }
+
+    footer .navigation {
+        width: 100%;
+    }
+
+    footer .contact {
+        width: 100%;
+    }
+
+    /* Navigation List */
+    footer .navigation nav {
+        flex-direction: row;
+    }
+
+    footer .navigation nav li {
+        width: 40%;
+    }
+
+    /* Copyright */
+    footer .copyright {
+        width: 70vw;
+    }
+}
+
+@media only screen and (min-width: 479px) and (max-width: 767px) {
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* Banner */
+    .banner .text h1 {
+        font-size: 48px;
+    }
+
+    .banner .text .text-type {
+        font-size: 26px;
+    }
+
+    .banner .text .buttons button {
+        margin-top: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 150px;
+    }
+
+    .banner .text .buttons button span {
+        font-size: 22px;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* Main page articles */
+    main div.full-width-background {
+        width: 100%;
+        background-color: #1279A1;
+    }
+
+    main article.main {
+        width: 70vw;
+        padding: 70px 0;
+        margin: auto auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    main article.main .info,
+    main article.main .icon {
+        width: 100vw;
+        height: auto;
+    }
+
+    main article.main .icon {
+        background-image: none;
+        margin-bottom: 20px;
+    }
+
+    main article.main .icon img {
+        display: initial;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* About athletes */
+    /* General */
+    main hr {
+        width: 80vw;
+    }
+
+    main article.athletes {
+        width: 70vw;
+        padding: 50px 0;
+        flex-wrap: wrap;
+    }
+
+    /* Article */
+    main article.athletes .info {
+        margin-top: 10px;
+    }
+
+    main article.athletes .icon {
+        height: auto;
+        width: 70vw;
+    }
+
+    main article.athletes .info {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    main article.athletes .icon img {
+        height: auto;
+        width: 250px;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* Products */
+    main section.products {
+        width: 70vw;
+        margin: 50px auto;
+    }
+
+    main section.products figure {
+        margin: 20px 0;
+        padding: 30px;
+        height: 340px;
+        width: 100%;
+    }
+
+    main section.products figure .info {
+        position: absolute;
+        bottom: 30px;
+    }
+
+    main section.products figure .flex {
+        height: 250px;
+    }
+
+    main section.products figure img {
+        height: 200px;
+        width: auto;
+        max-width: 60vw;
+    }
+
+    main section.products figure hr {
+        width: 60vw;
+    }
+
+    /* Buttons */
+    main #myBtnContainer {
+        width: 70vw;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    main .btn {
+        margin-top: 10px;
+        padding: 10px 0;
+        width: 47%;
+        font-size: 18px;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* Footer */
+    /* Container */
+    footer article {
+        width: 70vw;
+        padding: 50px 0;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    /* Subcontainers */
+    footer .social {
+        display: none;
+    }
+
+    footer .navigation {
+        width: 100%;
+    }
+
+    footer .contact {
+        width: 100%;
+    }
+
+    /* Navigation List */
+    footer .navigation nav {
+        flex-direction: row;
+    }
+
+    footer .navigation nav li {
+        width: 40%;
+    }
+
+    /* Copyright */
+    footer .copyright {
+        width: 70vw;
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* Banner */
+    .banner .text h1 {
+        font-size: 60px;
+    }
+
+    .banner .text .text-type {
+        font-size: 32px;
+    }
+
+    .banner .text .buttons button {
+        margin-top: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 180px;
+    }
+
+    .banner .text .buttons button span {
+        font-size: 24px;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* Main page articles */
+    main div.full-width-background {
+        width: 100%;
+        background-color: #1279A1;
+    }
+
+    main article.main {
+        width: 680px;
+        padding: 70px 0;
+        margin: auto auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    main article.main .info,
+    main article.main .icon {
+        width: 320px;
+        height: auto;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* About athletes */
+    /* General */
+    main hr {
+        width: 710px;
+    }
+
+    /* Article */
+    main article.athletes {
+        width: 680px;
+        padding: 50px 0;
+    }
+
+    main article.athletes .icon img {
+        height: auto;
+        width: 250px;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* Products */
+    main section.products {
+        width: 720px;
+        margin: 50px auto;
+    }
+
+    main section.products figure {
+        margin: 20px 20px;
+        padding: 30px;
+        height: 340px;
+        width: 260px;
+    }
+
+    main section.products figure .info {
+        position: absolute;
+        bottom: 30px;
+    }
+
+    main section.products figure .flex {
+        height: 250px;
+    }
+
+    main section.products figure img {
+        height: 200px;
+        width: auto;
+        max-width: 260px;
+    }
+
+    main section.products figure hr {
+        width: 260px;
+    }
+
+
+    /* Buttons */
+    main #myBtnContainer {
+        width: 680px;
+    }
+
+    main .btn {
+        width: 120px;
+        font-size: 18px;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* Footer */
+    /* Container */
+    footer article {
+        width: 690px;
+        padding: 50px 0;
+    }
+
+    /* Subcontainers */
+    footer .social {
+        display: none;
+    }
+
+    footer .navigation {
+        width: 30%;
+    }
+
+    footer .contact {
+        width: 70%;
+    }
+
+    /* Copyright */
+    footer .copyright {
+        width: 690px;
+    }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1600px) {
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* Banner */
+    .banner .text h1 {
+        font-size: 75px;
+    }
+
+    .banner .text .text-type {
+        font-size: 35px;
+    }
+
+    .banner .text .buttons button {
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 200px;
+    }
+
+    .banner .text .buttons button span {
+        font-size: 30px;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* Main page articles */
+    main div.full-width-background {
+        width: 100%;
+        background-color: #1279A1;
+    }
+
+    main article.main {
+        width: 850px;
+        padding: 70px 0;
+        margin: auto auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    main article.main .info,
+    main article.main .icon {
+        width: 380px;
+        height: auto;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* About athletes */
+    /* General */
+    main hr {
+        width: 950px;
+    }
+
+    /* Article */
+    main article.athletes {
+        width: 850px;
+        padding: 50px 0;
+    }
+
+    main article.athletes .info,
+    main article.athletes .icon {
+        width: 50%;
+        margin: auto auto;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* Products */
+    main section.products {
+        width: 880px;
+        margin: 50px auto;
+    }
+
+    main section.products figure {
+        margin: 20px 16px;
+        padding: 30px;
+        height: 340px;
+        width: 200px;
+    }
+
+    main section.products figure .info {
+        position: absolute;
+        bottom: 30px;
+    }
+
+    main section.products figure .flex {
+        height: 250px;
+    }
+
+    main section.products figure img {
+        height: 200px;
+        width: auto;
+        max-width: 210px;
+    }
+
+    main section.products figure hr {
+        width: 210px;
+    }
+
+    /* Buttons */
+    main #myBtnContainer {
+        width: 850px;
+    }
+
+    main .btn {
+        width: 150px;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------ */
+    /* Footer */
+    /* Container */
+    footer article {
+        width: 690px;
+        padding: 50px 0;
+    }
+
+    /* Subcontainers */
+    footer .social {
+        display: none;
+    }
+
+    footer .navigation {
+        width: 30%;
+    }
+
+    footer .contact {
+        width: 70%;
+    }
+
+    /* Copyright */
+    footer .copyright {
+        width: 690px;
+    }
+}
