@@ -2,7 +2,7 @@
    ------------------------------------------------------------------------------------------------------  */
 // Typewriter animation
 // Method
-const typeWriter = function(txtElement, words, wait = 1500) {
+const typeWriter = function (txtElement, words, wait = 1500) {
     this.txtElement = txtElement;
     this.words = words;
     this.txt = '';
@@ -12,7 +12,7 @@ const typeWriter = function(txtElement, words, wait = 1500) {
     this.isDeleting = false;
 }
 // Type method
-typeWriter.prototype.type = function() {
+typeWriter.prototype.type = function () {
     // Current index of word
     let current = this.wordIndex % this.words.length;
     // Get full text of current word
@@ -52,7 +52,7 @@ typeWriter.prototype.type = function() {
     setTimeout(() => this.type(), typeSpeed);
 }
 // Initialize App
-const init = function() {
+const init = function () {
     const txtElement = document.querySelector('.text-type');
     const words = JSON.parse(txtElement.getAttribute('data-words'));
     const wait = txtElement.getAttribute('data-wait');
