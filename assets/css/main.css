@@ -187,7 +187,7 @@ header .row-listed-navigation {
     position: fixed;
     display: flex;
     justify-content: space-between;
-    width: 1100px;
+    width: 1250px;
     height: 50px;
     top: 0;
     left: 50%;
@@ -417,13 +417,19 @@ header .content img:nth-of-type(2) {
 
 @media only screen and (min-width: 767px) and (max-width: 991px) {
     header .row-listed-navigation {
-        width: 680px;
+        width: 80vw;
     }
 }
 
-@media only screen and (min-width: 991px) and (max-width: 1600px) {
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
     header .row-listed-navigation {
-        width: 850px;
+        width: 900px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+    header .row-listed-navigation {
+        width: 1050px;
     }
 }
 
@@ -584,8 +590,8 @@ main div.full-width-background {
 }
 
 main article.main {
-    width: 1100px;
-    padding: 70px 0;
+    width: 1250px;
+    padding: 160px 0;
     margin: auto auto;
     display: flex;
     justify-content: space-between;
@@ -603,7 +609,7 @@ main article.inverted a {
 main article.main .info,
 main article.main .icon {
     height: auto;
-    width: 500px;
+    width: 575px;
 }
 
 main article.main .icon {
@@ -618,6 +624,7 @@ main article.main img {
     width: 100%;
     height: auto;
     display: none;
+    border-radius: 6px;
 }
 
 main a {
@@ -659,10 +666,6 @@ main a {
 }
 
 @media only screen and (min-width: 479px) and (max-width: 767px) {
-    main div.full-width-background {
-        width: 100%;
-        background-color: #1279A1;
-    }
 
     main article.main {
         width: 70vw;
@@ -691,14 +694,37 @@ main a {
 }
 
 @media only screen and (min-width: 767px) and (max-width: 991px) {
-    main div.full-width-background {
-        width: 100%;
-        background-color: #1279A1;
-    }
 
     main article.main {
-        width: 680px;
-        padding: 70px 0;
+        width: 70vw;
+        padding: 120px 0;
+        margin: auto auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    main article.main .info,
+    main article.main .icon {
+        width: 100vw;
+        height: auto;
+    }
+
+    main article.main .icon {
+        background-image: none;
+        margin-bottom: 20px;
+    }
+
+    main article.main .icon img {
+        display: initial;
+    }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+
+    main article.main {
+        width: 900px;
+        padding: 120px 0;
         margin: auto auto;
         display: flex;
         justify-content: space-between;
@@ -706,20 +732,16 @@ main a {
 
     main article.main .info,
     main article.main .icon {
-        width: 320px;
+        width: 420px;
         height: auto;
     }
 }
 
-@media only screen and (min-width: 991px) and (max-width: 1600px) {
-    main div.full-width-background {
-        width: 100%;
-        background-color: #1279A1;
-    }
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
 
     main article.main {
-        width: 850px;
-        padding: 70px 0;
+        width: 1050px;
+        padding: 140px 0;
         margin: auto auto;
         display: flex;
         justify-content: space-between;
@@ -727,7 +749,7 @@ main a {
 
     main article.main .info,
     main article.main .icon {
-        width: 380px;
+        width: 475px;
         height: auto;
     }
 }
@@ -736,16 +758,17 @@ main a {
    ------------------------------------------------------------------------------------------------------  */
 /* About athletes */
 main article.athletes {
-    width: 1050px;
+    width: 1250px;
     padding: 70px 0;
     margin: auto auto;
     display: flex;
+    justify-content: space-between;
 }
 
 main article.athletes .info,
 main article.athletes .icon {
     height: auto;
-    width: 50%;
+    width: 47%;
 }
 
 main article.athletes .icon {
@@ -774,7 +797,7 @@ main hr {
     }
 
     main article.athletes {
-        width: 70vw;
+        width: 80vw;
         padding: 50px 0;
         flex-wrap: wrap;
         flex-direction: column;
@@ -786,7 +809,7 @@ main hr {
 
     main article.athletes .icon {
         height: auto;
-        width: 70vw;
+        width: 80vw;
     }
 
     main article.athletes .info {
@@ -838,12 +861,27 @@ main hr {
 
 @media only screen and (min-width: 767px) and (max-width: 991px) {
     main hr {
-        width: 710px;
+        width: 80vw;
     }
 
     main article.athletes {
-        width: 680px;
+        width: 70vw;
         padding: 50px 0;
+        flex-wrap: wrap;
+    }
+
+    main article.athletes .info {
+        margin-top: 10px;
+    }
+
+    main article.athletes .icon {
+        height: auto;
+        width: 70vw;
+    }
+
+    main article.athletes .info {
+        width: 100%;
+        margin-top: 20px;
     }
 
     main article.athletes .icon img {
@@ -852,13 +890,30 @@ main hr {
     }
 }
 
-@media only screen and (min-width: 991px) and (max-width: 1600px) {
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
     main hr {
         width: 950px;
     }
 
     main article.athletes {
-        width: 850px;
+        width: 900px;
+        padding: 50px 0;
+    }
+
+    main article.athletes .info,
+    main article.athletes .icon {
+        width: 50%;
+        margin: auto auto;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+    main hr {
+        width: 1100px;
+    }
+
+    main article.athletes {
+        width: 1050px;
         padding: 50px 0;
     }
 
@@ -887,7 +942,7 @@ main section.products figure {
     padding: 30px;
     height: 350px;
     width: 280px;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 main section.products figure:hover img {
@@ -949,7 +1004,7 @@ main .btn {
     background-color: inherit;
     opacity: 0.95;
     border: 2px solid #1f1f1f;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 22px;
 }
 
@@ -1066,15 +1121,16 @@ main ul.myBtnContainer.opened {
 
 @media only screen and (min-width: 767px) and (max-width: 991px) {
     main section.products {
-        width: 720px;
+        width: 70vw;
         margin: 50px auto;
+        justify-content: space-between;
     }
 
     main section.products figure {
-        margin: 20px 20px;
+        margin: 20px 0;
         padding: 30px;
         height: 340px;
-        width: 260px;
+        width: 37%;
     }
 
     main section.products figure .info {
@@ -1089,29 +1145,31 @@ main ul.myBtnContainer.opened {
     main section.products figure img {
         height: 200px;
         width: auto;
-        max-width: 260px;
+        max-width: 60vw;
     }
 
     main section.products figure hr {
-        width: 260px;
+        width: 25vw;
     }
-
 
     /* Buttons */
     main #myBtnContainer {
-        width: 680px;
+        width: 70vw;
+        flex-wrap: wrap;
+        margin-top: 20px;
     }
 
     main .btn {
-        width: 120px;
+        margin-top: 10px;
+        padding: 10px 0;
+        width: 47%;
         font-size: 18px;
     }
-
 }
 
-@media only screen and (min-width: 991px) and (max-width: 1600px) {
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
     main section.products {
-        width: 880px;
+        width: 938px;
         margin: 50px auto;
     }
 
@@ -1119,7 +1177,7 @@ main ul.myBtnContainer.opened {
         margin: 20px 16px;
         padding: 30px;
         height: 340px;
-        width: 200px;
+        width: 220px;
     }
 
     main section.products figure .info {
@@ -1143,7 +1201,49 @@ main ul.myBtnContainer.opened {
 
     /* Buttons */
     main #myBtnContainer {
-        width: 850px;
+        width: 900px;
+    }
+
+    main .btn {
+        width: 160px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+    main section.products {
+        width: 1090px;
+        margin: 50px auto;
+    }
+
+    main section.products figure {
+        margin: 20px 16px;
+        padding: 30px;
+        height: 340px;
+        width: 270px;
+    }
+
+    main section.products figure .info {
+        position: absolute;
+        bottom: 30px;
+    }
+
+    main section.products figure .flex {
+        height: 250px;
+    }
+
+    main section.products figure img {
+        height: 200px;
+        width: auto;
+        max-width: 210px;
+    }
+
+    main section.products figure hr {
+        width: 260px;
+    }
+
+    /* Buttons */
+    main #myBtnContainer {
+        width: 1050px;
     }
 
     main .btn {
@@ -1164,7 +1264,7 @@ footer p {
 }
 
 footer article {
-    width: 1050px;
+    width: 1250px;
     padding: 70px 0;
     margin: auto auto;
 }
@@ -1248,7 +1348,7 @@ footer .contact {
 
 /* Copyright */
 footer .copyright {
-    width: 1050px;
+    width: 1250px;
     margin: auto;
     color: #1f1f1f;
     opacity: 1;
@@ -1265,7 +1365,7 @@ footer .footer-hr hr {
 
 @media only screen and (max-width: 479px) {
     footer article {
-        width: 70vw;
+        width: 80vw;
         padding: 30px 0;
         flex-direction: column;
         flex-wrap: wrap;
@@ -1295,7 +1395,7 @@ footer .footer-hr hr {
 
     /* Copyright */
     footer .copyright {
-        width: 70vw;
+        width: 80vw;
     }
 }
 
@@ -1338,7 +1438,7 @@ footer .footer-hr hr {
 
 @media only screen and (min-width: 767px) and (max-width: 991px) {
     footer article {
-        width: 690px;
+        width: 70vw;
         padding: 50px 0;
     }
 
@@ -1362,13 +1462,13 @@ footer .footer-hr hr {
 
     /* Copyright */
     footer .copyright {
-        width: 690px;
+        width: 70vw;
     }
 }
 
-@media only screen and (min-width: 991px) and (max-width: 1600px) {
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
     footer article {
-        width: 850px;
+        width: 900px;
         padding: 50px 0;
     }
 
@@ -1387,6 +1487,31 @@ footer .footer-hr hr {
 
     /* Copyright */
     footer .copyright {
-        width: 690px;
+        width: 900px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+    footer article {
+        width: 1050px;
+        padding: 50px 0;
+    }
+
+    /* Subcontainers */
+    footer .social {
+        display: none;
+    }
+
+    footer .navigation {
+        width: 30%;
+    }
+
+    footer .contact {
+        width: 70%;
+    }
+
+    /* Copyright */
+    footer .copyright {
+        width: 1050px;
     }
 }
