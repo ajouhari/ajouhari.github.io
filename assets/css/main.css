@@ -765,6 +765,14 @@ main article.main .icon {
     align-items: center;
 }
 
+main article.main .icon.face-picture {
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 50px 20px 50px 50px;
+    border-radius: 6px;
+}
+
 main article.main .icon img {
     width: 400px;
     height: auto;
@@ -773,17 +781,6 @@ main article.main .icon img {
 main a {
     color: #1f1f1f;
     text-decoration: none;
-}
-
-main article.main.about .icon img.full {
-    width: auto;
-    height: 750px;
-}
-
-main article.main.about .icon img.cropped {
-    display: none;
-    width: 100%;
-    height: auto;
 }
 
 main article.main .icon img.web-page {
@@ -814,11 +811,12 @@ main article.main .icon img.web-page {
         padding-bottom: 0;
     }
 
+    main article.main .icon.face-picture {
+        display: none;
+    }
+
     main article.main .icon img {
         width: 70vw;
-    }
-    main article.main.about .icon img {
-        display: none;
     }
 
     main article.main .icon img.web-page {
@@ -847,12 +845,12 @@ main article.main .icon img.web-page {
     main article.main .icon {
         padding-bottom: 0;
     }
+    main article.main .icon.face-picture {
+        display: none;
+    }
 
     main article.main .icon img {
         width: 40vw;
-    }
-    main article.main.about .icon img {
-        display: none;
     }
     main article.main .icon img.web-page {
         height: auto;
@@ -879,12 +877,12 @@ main article.main .icon img.web-page {
     main article.main .icon {
         padding-bottom: 0;
     }
+    main article.main .icon.face-picture {
+        display: none;
+    }
 
     main article.main .icon img {
         width: 40vw;
-    }
-    main article.main.about .icon img {
-        display: none;
     }
 
     main article.main .icon img.web-page {
@@ -905,15 +903,6 @@ main article.main .icon img.web-page {
     main article.main .icon {
         width: 420px;
         height: auto;
-    }
-
-    main article.main.about .icon img.full {
-        display: none;
-    }
-    main article.main.about .icon img.cropped {
-        display: initial;
-        height: auto;
-        width: 100%;
     }
 
     main article.main .icon img.web-page {
@@ -939,9 +928,6 @@ main article.main .icon img.web-page {
 
     main article.main .icon img {
         width: 475px;
-    }
-    main article.main.about .icon img.full {
-        height: 850px;
     }
 
     main article.main .icon img.web-page {
