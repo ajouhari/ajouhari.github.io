@@ -649,9 +649,11 @@ header .top-navigation.menu-opened ul.menu li.menu-item:nth-child(7) {
         opacity: 1;
         visibility: visible;
     }
+
     50% {
         opacity: 0.5;
     }
+
     100% {
         transform: translateY(40vh) rotate(360deg);
         opacity: 0;
@@ -664,6 +666,7 @@ header .top-navigation.menu-opened ul.menu li.menu-item:nth-child(7) {
     .banner {
         min-height: 300px;
     }
+
     .banner .text h1 {
         font-size: 30px;
     }
@@ -675,6 +678,7 @@ header .top-navigation.menu-opened ul.menu li.menu-item:nth-child(7) {
     .banner .text .text-type {
         font-size: 20px;
     }
+
     .banner .text .buttons button {
         margin: 30px 8px 10px 8px;
     }
@@ -694,9 +698,9 @@ header .top-navigation.menu-opened ul.menu li.menu-item:nth-child(7) {
     }
 
 
-.banner .text .buttons button {
-    margin: 40px 15px 10px 15px;
-}
+    .banner .text .buttons button {
+        margin: 40px 15px 10px 15px;
+    }
 
 }
 
@@ -714,9 +718,9 @@ header .top-navigation.menu-opened ul.menu li.menu-item:nth-child(7) {
     }
 
 
-.banner .text .buttons button {
-    margin: 50px 20px 10px 20px;
-}
+    .banner .text .buttons button {
+        margin: 50px 20px 10px 20px;
+    }
 }
 
 @media only screen and (min-width: 991px) and (max-width: 1600px) {
@@ -845,6 +849,7 @@ main article.main .icon img.web-page {
     main article.main .icon {
         padding-bottom: 0;
     }
+
     main article.main .icon.face-picture {
         display: none;
     }
@@ -852,6 +857,7 @@ main article.main .icon img.web-page {
     main article.main .icon img {
         width: 40vw;
     }
+
     main article.main .icon img.web-page {
         height: auto;
         width: 320px;
@@ -877,6 +883,7 @@ main article.main .icon img.web-page {
     main article.main .icon {
         padding-bottom: 0;
     }
+
     main article.main .icon.face-picture {
         display: none;
     }
@@ -961,6 +968,7 @@ main article.game-description .credits,
 main article.game-description .info {
     width: 50%;
 }
+
 main article.game-description .credits button {
     margin-top: 0px;
 }
@@ -986,73 +994,84 @@ main .game .small-stumble-game {
 /* Adjusting For Screen Size */
 
 @media only screen and (max-width: 479px) {
+
     main .game,
     main .game-description {
         width: 80vw;
         padding: 5vw;
         flex-direction: column;
     }
+
     main article.game-description .credits,
     main article.game-description .info {
         width: 100%;
     }
+
     main .game {
         margin-top: 20px;
     }
-    
+
     main article.game-description {
         margin-bottom: 20px;
     }
 }
 
 @media only screen and (min-width: 479px) and (max-width: 767px) {
+
     main .game,
     main .game-description {
         width: 80vw;
         padding: 5vw;
         flex-direction: column;
     }
+
     main article.game-description .credits,
     main article.game-description .info {
         width: 100%;
     }
+
     main .game {
         margin-top: 20px;
     }
-    
+
     main article.game-description {
         margin-bottom: 20px;
     }
 }
 
 @media only screen and (min-width: 767px) and (max-width: 991px) {
+
     main .game,
     main .game-description {
         width: 80vw;
         padding: 5vw;
     }
+
     main article.game-description .credits,
     main article.game-description .info {
         width: 50%;
     }
+
     main .game {
         margin-top: 40px;
     }
-    
+
     main article.game-description {
         margin-bottom: 40px;
     }
 }
 
 @media only screen and (min-width: 991px) and (max-width: 1200px) {
+
     main .game,
     main .game-description {
         width: 800px;
     }
+
     main .game {
         margin-top: 60px;
     }
-    
+
     main article.game-description {
         margin-bottom: 60px;
     }
@@ -1068,12 +1087,14 @@ main .game .small-stumble-game {
     main .game .error {
         display: initial;
     }
+
     main .game .title {
         display: none;
     }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
+
     main .game,
     main .game-description {
         width: 950px;
@@ -1086,10 +1107,11 @@ main .game .small-stumble-game {
     main .game .small-stumble-game {
         display: initial;
     }
+
     main .game {
         margin-top: 80px;
     }
-    
+
     main article.game-description {
         margin-bottom: 80px;
     }
