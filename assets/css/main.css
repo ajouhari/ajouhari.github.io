@@ -786,6 +786,11 @@ main article.main.about .icon img.cropped {
     height: auto;
 }
 
+main article.main .icon img.web-page {
+    height: 450px;
+    width: auto;
+}
+
 /* Adjusting For Screen Size */
 
 @media only screen and (max-width: 479px) {
@@ -815,6 +820,11 @@ main article.main.about .icon img.cropped {
     main article.main.about .icon img {
         display: none;
     }
+
+    main article.main .icon img.web-page {
+        height: auto;
+        width: 80vw;
+    }
 }
 
 @media only screen and (min-width: 479px) and (max-width: 767px) {
@@ -839,12 +849,15 @@ main article.main.about .icon img.cropped {
     }
 
     main article.main .icon img {
-        width: 70vw;
+        width: 40vw;
     }
     main article.main.about .icon img {
         display: none;
     }
-
+    main article.main .icon img.web-page {
+        height: auto;
+        width: 320px;
+    }
 }
 
 @media only screen and (min-width: 767px) and (max-width: 991px) {
@@ -868,10 +881,15 @@ main article.main.about .icon img.cropped {
     }
 
     main article.main .icon img {
-        width: 50vw;
+        width: 40vw;
     }
     main article.main.about .icon img {
         display: none;
+    }
+
+    main article.main .icon img.web-page {
+        height: auto;
+        width: 320px;
     }
 }
 
@@ -897,6 +915,11 @@ main article.main.about .icon img.cropped {
         height: auto;
         width: 100%;
     }
+
+    main article.main .icon img.web-page {
+        height: auto;
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
@@ -919,6 +942,10 @@ main article.main.about .icon img.cropped {
     }
     main article.main.about .icon img.full {
         height: 850px;
+    }
+
+    main article.main .icon img.web-page {
+        height: 500px;
     }
 }
 
