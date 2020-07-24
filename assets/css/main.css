@@ -344,7 +344,7 @@ header .top-navigation ul.menu {
 }
 
 header .top-navigation ul.menu li.menu-item {
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #b3b3b3;
     margin-top: 5px;
     transform: scale(1.15) translateY(-30px);
     opacity: 0;
