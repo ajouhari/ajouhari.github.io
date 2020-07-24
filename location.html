@@ -56,40 +56,15 @@
         <section class="banner short"
             style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/icons/scuba-diver.jpg);">
             <article class="text">
-                <h1>Our Athletes</h1>
-                <span class="text-type" data-wait="1500" data-words='["Osama", "Ishaq", "Mariam"]'></span>
+                <h1>Location</h1>
             </article>
         </section>
         <article class="main hidden">
             <div class="icon">
-                <img src="./images/personal/mariam.png" alt="">
+                <div id="map"></div>
             </div>
             <div class="info">
-                <a href="#">
-                    <h1>Mariam</h1>
-                </a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet id donec ultrices tincidunt arcu non sodales. Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere. At auctor urna nunc id cursus metus. Feugiat vivamus at augue eget arcu. Arcu odio ut sem nulla pharetra diam sit amet. Amet risus nullam eget felis eget nunc. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis. In est ante in nibh mauris. Viverra aliquet eget sit amet tellus cras adipiscing enim eu.</p>
-            </div>
-        </article>
-        <article class="main hidden">
-            <div class="icon">
-                <img src="./images/personal/ishaq.png" alt="">
-            </div>
-            <div class="info">
-                <a href="#">
-                    <h1>Ishaq</h1>
-                </a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet id donec ultrices tincidunt arcu non sodales. Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere. At auctor urna nunc id cursus metus. Feugiat vivamus at augue eget arcu. Arcu odio ut sem nulla pharetra diam sit amet. Amet risus nullam eget felis eget nunc. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis. In est ante in nibh mauris. Viverra aliquet eget sit amet tellus cras adipiscing enim eu.</p>
-            </div>
-        </article>
-        <article class="main hidden">
-            <div class="icon">
-                <img src="./images/personal/osama.png" alt="">
-            </div>
-            <div class="info">
-                <a href="#">
-                    <h1>Osama</h1>
-                </a>
+                <h1>Location</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet id donec ultrices tincidunt arcu non sodales. Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere. At auctor urna nunc id cursus metus. Feugiat vivamus at augue eget arcu. Arcu odio ut sem nulla pharetra diam sit amet. Amet risus nullam eget felis eget nunc. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis. In est ante in nibh mauris. Viverra aliquet eget sit amet tellus cras adipiscing enim eu.</p>
             </div>
         </article>
@@ -108,14 +83,14 @@
             </div>
             <!-- Footer navigation -->
             <div class="navigation">
-                <h2>Quick Links:</h2>
+                <h2>Quick links:</h2>
                 <nav class="flex">
                     <li><a href="./index.html">Home</a></li>
-                    <li><a href="#">Athletes</a></li>
+                    <li><a href="./athletes.html">Athletes</a></li>
                     <li><a href="./equipment.html">Equipment</a></li>
-                    <li><a href="#">Courses</a></li>
-                    <li><a href="#">Boat Trips</a></li>
-                    <li><a href="#">Location</a></li>
+                    <li><a href="./courses.html">Courses</a></li>
+                    <li><a href="./trips.html">Boat Trips</a></li>
+                    <li><a href="./location.html">Location</a></li>
                 </nav>
             </div>
             <!-- Footer contact information -->
@@ -137,7 +112,8 @@
         </div>
     </footer>
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/typewriter.js"></script>
+    <script src="./assets/js/map.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXCoaEUQukI47Pfw1lCLogQyXrdAmI59Y&callback=initMap"></script>
 </body>
 
 </html>
