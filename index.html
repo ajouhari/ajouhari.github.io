@@ -12,6 +12,14 @@
     <link rel="icon" type="image/x-icon" href="./images/logo/logo-main.svg" />
     <link rel="stylesheet" href="./assets/css/main.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <IfModule mod_rewrite.c>
+        RewriteEngine On
+        RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /html/(.*).html\ HTTP/
+        RewriteRule .* http://localhost/html/%1 [R=301,L]
+     
+        RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /html/(.*)\ HTTP/
+        RewriteRule .* %1.html [L]
+     </IfModule>
 </head>
 
 <body>
