@@ -236,6 +236,24 @@ p {
     line-height: 2;
 }
 
+.blue-link,
+.blue-link span {
+    color: #2997ff;
+}
+
+.blue-link {
+    padding: 10px 0;
+}
+
+.blue-link span {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.blue-link:hover span {
+    text-decoration: underline;
+}
+
 /* ------------------------------------------------------------------------------------------------------
    ------------------------------------------------------------------------------------------------------  */
 /* Navigation */
@@ -655,14 +673,6 @@ main article.main .icon {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-main article.main .icon.face-picture {
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 50px 20px 50px 50px;
-    border-radius: 6px;
 }
 
 main article.main .icon img {
