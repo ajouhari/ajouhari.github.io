@@ -266,7 +266,6 @@ header {
     height: auto;
     overflow: hidden;
     background: #1f1f1f;
-    z-index: 10;
 }
 
 header .top-navigation {
@@ -280,7 +279,7 @@ header .top-navigation {
     overflow: hidden;
     overflow-x: hidden;
     transition: all 0.4s ease-out, background-color 1s ease-out;
-    z-index: 10;
+    z-index: 1;
 }
 
 header .row-listed-navigation {
@@ -292,7 +291,7 @@ header .row-listed-navigation {
     top: 0;
     left: 50%;
     transform: translate(-50%, 0);
-    z-index: 11;
+    z-index: 2;
     align-items: center;
 }
 
@@ -332,7 +331,7 @@ header .top-navigation .burger-container {
     user-select: none;
     -webkit-tap-highlight-color: transparent;
     visibility: hidden;
-    z-index: 12;
+    z-index: 3;
 }
 
 header .top-navigation .burger-container #burger {
@@ -551,6 +550,7 @@ header .top-navigation.menu-opened ul.menu li.menu-item:nth-child(7) {
     left: 50%;
     transform: translate(-50%, 0);
     position: relative;
+    padding-top: 50px;
 }
 
 .banner.short {
