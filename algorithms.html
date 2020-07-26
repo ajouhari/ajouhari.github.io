@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Algorithms</title>
     <link rel="icon" type="image/x-icon" href="./images/logo/logo-main.svg" />
     <link rel="stylesheet" href="./assets/css/main.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
@@ -57,99 +57,85 @@
     </header>
     <main>
         <!-- Banner -->
-        <section class="banner">
-            <article class="text">
-                <h1>Abdulrahman Jouhari</h1>
-                <span class="text-type" data-wait="1500"
-                    data-words='["Web developer", "Graphic designer", "Game developer"]'></span>
-                <div class="buttons">
-                    <button onclick="location.href='./algorithms.html'" type="button"><span>Projects</span></button>
-                    <button onclick="location.href='./about.html'" type="button"><span>About</span></button>
-                </div>
+        <section class="banner short">
+            <article class="text short">
+                <h1>Algorithms</h1>
             </article>
+            <div class="letters-animation">
+                <ul class="letters">
+                    <li>a</li>
+                    <li>l</li>
+                    <li>g</li>
+                    <li>o</li>
+                    <li>r</li>
+                    <li>i</li>
+                </ul>
+            </div>
         </section>
-        <!-- About article -->
+        <!-- General algorithms article -->
         <article class="main hidden">
             <div class="icon">
                 <img src="./images/icons/gears-icon.svg" alt="">
             </div>
             <div class="info">
                 <a href="">
-                    <h1>About</h1>
+                    <h1>General algorithms</h1>
                 </a>
-                <p>I'm Abdulrahman Jouhari, currently a high school student, and I'm very keen in computer science. I
-                    truly believe in free and open-source software, that said, I keep my all projects available to view
-                    and critique (open-source) under a MIT licence.
+                <p>There's a whole host of simple tasks that can be done more efficiently by algorithms, saving people
+                    much time and effort. Here I have documented a wide array of algorithms, of varying complexity and
+                    purposes.
                     <br><br>
-                    I hope you find my code to be of some interest, and if you have any inquires or recommendations,
-                    feel free to contact me through my email listed in the footer below.
-                </p>
+                    Most of the algorithms displayed are in Python; however, moving forward, many of the algorithms will
+                    be written in C++ as it has a runtime advantage. Keeping best practices in mind, I always aim to
+                    write my code to be simple, well-documented, and with the fastest runtime possible.</p>
                 <br>
-                <a class="blue-link" href="./about.html"><span>Learn more</span>></a>
+                <a class="blue-link" href="https://github.com/ajouhari/algorithms/tree/master/python-general"><span>View
+                        code in GitHub</span>></a>
             </div>
         </article>
-        <!-- Algorithms article -->
+        <!-- Search algorithms article -->
         <article class="main inverted hidden">
             <div class="icon">
                 <img src="./images/icons/nodes-icon.svg" alt="">
             </div>
             <div class="info">
                 <a href="">
-                    <h1>Algorithms</h1>
+                    <h1>Search algorithms</h1>
                 </a>
-                <p>Algorithms are much like the gears that keep a machine running. They are critical to many operations,
-                    and how they’re coded may save time when you can least afford it.
+                <p>Search algorithms have two primary function: to find if a path exists between two locations, and if
+                    so, to find the shortest path between them. Here I will code and review multiple search algorithms,
+                    from a brute-force method, to a well-designed a-star search algorithm.
                     <br><br>
-                    Many of our everyday tasks are rather menial, and can easily be automated or assisted by computer
-                    algorithms. Available is a list of algorithms that serve many different purposes. Each are labelled
-                    by their complexity, instructions, and the date at which they were created.</p>
+                    As trivial as they may seem looking from the outside, the inner working of a search algorithm is a
+                    complex and highly important mechanism of the internet. I try my best to understand and then explain
+                    the multiple ways to implement it and the advantages that each may serve.</p>
                 <br>
-                <a class="blue-link" href="./algorithms.html"><span>Learn more</span>></a>
+                <a class="blue-link"
+                    href="https://github.com/ajouhari/algorithms/tree/master/search-algorithms"><span>View code in
+                        GitHub</span>></a>
             </div>
         </article>
-        <!-- Web design article -->
+        <!-- Sort algorithms article -->
         <article class="main hidden">
             <div class="icon">
-                <img src="./images/icons/web-design-icon.svg" alt="">
+                <img src="./images/icons/sorted-bars-icon.svg" alt="">
             </div>
             <div class="info">
-                <a href="">
-                    <h1>Web design</h1>
-                </a>
-                <p>Sometimes I feel like cleaning my eyes out with soap after seeing the monstrosity that is a poorly
-                    designed, buggy website. But fear no more! Here I will show you what to do (and what not to do) when
-                    building a website.
+                <h1>Sort algorithms</h1>
+                <p>From databases to e-commerce sites, sorting engines play a cruical role that makes a substancial
+                    difference. There are many ways to go about making one, and with today’s big data, it becomes
+                    increasingly important to use more and more efficient sorting algorithms to sift through the data.
                     <br><br>
-                    Even though I like to bash some websites for being buggy and having a bad design, a journey of a
-                    thousand miles starts with one step, and it never hurts to try. Hopefully my repositories can be of
-                    some use. Here I showcase my web design progress, the good, the bad, and the ugly.</p>
+                    Here I will code and review some of the best known sorting algorithms. For the purpose of simplicity
+                    and explaination, it will be written in Python, which is a great language to learn coding with.</p>
                 <br>
-                <a class="blue-link" href="./web-design.html"><span>Learn more</span>></a>
-            </div>
-        </article>
-        <!-- Game development article -->
-        <article class="main inverted hidden">
-            <div class="icon">
-                <img src="./images/icons/game-controller-icon.svg" alt="">
-            </div>
-            <div class="info">
-                <h1>Game development</h1>
-                <p>There’s is no better feeling than that of a breezy summer night as a kid, staying indoors and playing
-                    your favorite game. Games are a great way to relax and enjoy the moment, and that’s what I aim for
-                    when creating my video games.</p>
-                <h3>- Stumble</h3>
-                <p>Stumble is my first game development project, making this game took a great deal of trial and error.
-                    But eventually, I got a working model as a foundation to what will later become a fully fledged,
-                    multi-level game. This was produced using the Unity framework, and the Bolt and Sunnyland assets.
-                    The game is currently not supported on mobile and tablets.</p>
-                <br>
-                <a class="blue-link" href="./stumble.html"><span>Play Stumble</span>></a>
+                <a class="blue-link" href="https://github.com/ajouhari/algorithms"><span>View code in GitHub</span>></a>
             </div>
         </article>
     </main>
     <footer>
+        <!-- Footer navigation -->
         <article class="flex">
-            <!-- Footer navigation -->
             <div class="navigation">
                 <h2>Find us:</h2>
                 <nav class="flex">
@@ -191,7 +177,6 @@
         </div>
     </footer>
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/typewriter.js"></script>
 </body>
 
 </html>
