@@ -1060,6 +1060,38 @@ main article.main .icon img.web-page {
     width: auto;
 }
 
+/* Contact form */
+main .contact-form input,
+main .contact-form textarea {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    width: 80%;
+    font-family: Ubuntu, sans-serif;
+    line-height: 2;
+}
+main .contact-form textarea {
+    min-height: 100px;
+    height: 100px;
+    resize: vertical;
+}
+
+main .contact-form .recaptcha {
+    border-radius: 6px;
+}
+main .contact-form button {
+    margin: 0;
+    width: 160px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2997ff;
+    opacity: 1;
+}
+main .contact-form button span {
+    font-size: 18px;
+    color: #fff;
+}
+
 /* Adjusting For Screen Size */
 
 @media only screen and (max-width: 479px) {
@@ -1449,7 +1481,7 @@ footer .copyright {
 
 footer .bottom-hr hr {
     width: 100vw;
-    color: #1f1f1f;
+    color: #e7e7e7;
     opacity: 0.6;
 }
 
