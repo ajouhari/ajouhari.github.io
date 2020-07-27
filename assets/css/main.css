@@ -1070,6 +1070,7 @@ main .contact-form textarea {
     font-family: Ubuntu, sans-serif;
     line-height: 2;
 }
+
 main .contact-form textarea {
     min-height: 100px;
     height: 100px;
@@ -1080,15 +1081,17 @@ main .contact-form .recaptcha {
     border-radius: 6px;
     max-width: 100%;
 }
+
 main .contact-form button {
     margin: 0;
     width: 160px;
-    height: 45px;
+    height: 46px;
     border: none;
     border-radius: 6px;
     background-color: #2997ff;
     opacity: 1;
 }
+
 main .contact-form button span {
     font-size: 18px;
     color: #fff;
