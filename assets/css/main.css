@@ -1069,6 +1069,7 @@ main .contact-form textarea {
     width: 80%;
     font-family: Ubuntu, sans-serif;
     line-height: 2;
+    color: #1f1f1f;
 }
 
 main .contact-form textarea {
