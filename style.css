@@ -344,6 +344,8 @@ img {
 }
 .header__logo {
   margin-right: 35px;
+  width: 120px;
+  height: auto;
 }
 .header__link {
   font-family: "Work Sans", sans-serif;
